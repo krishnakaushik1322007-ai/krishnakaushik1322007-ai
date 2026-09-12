@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Preview - Krishna Kaushik</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+    .badge-preview {
+      background: #238636;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .markdown-body {
+      background-color: transparent !important;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 16px 0;
+    }
+    th, td {
+      border: 1px solid #30363d;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #21262d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-bar">
+      <div>
+        <h2 style="margin: 0; color: #58a6ff;">🚀 krishnakaushik1322007-ai / README.md</h2>
+        <span style="color: #8b949e; font-size: 14px;">Live Preview of your Enhanced GitHub Profile</span>
+      </div>
+      <span class="badge-preview">AI Engineer & Data Scientist</span>
+    </div>
+    <div id="content" class="markdown-body"></div>
+  </div>
+
+  <script>
+    fetch('README.md')
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById('content').innerHTML = marked.parse(text);
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
