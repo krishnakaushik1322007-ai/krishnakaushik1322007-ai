@@ -135,9 +135,9 @@ superpower: Low-level computational efficiency (C/C++) coupled with high-level A
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/github-contribution-grid-snake-dark.svg">
-  <img alt="GitHub Contribution Snake" src="./assets/github-contribution-grid-snake-dark.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg">
+  <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg" width="100%" />
 </picture>
 
 </div>
