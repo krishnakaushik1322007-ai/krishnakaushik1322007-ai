@@ -17,13 +17,13 @@
       justify-content: center;
     }
     .container {
-      max-width: 900px;
+      max-width: 920px;
       width: 100%;
-      background: #161b22;
+      background: #0d1117;
       border: 1px solid #30363d;
       border-radius: 12px;
-      padding: 32px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      padding: 36px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
     }
     .header-bar {
       display: flex;
@@ -31,18 +31,20 @@
       justify-content: space-between;
       border-bottom: 1px solid #30363d;
       padding-bottom: 16px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
     .badge-preview {
-      background: #238636;
-      color: white;
-      padding: 4px 12px;
+      background: linear-gradient(135deg, #00F5D4, #7928CA);
+      color: #0d1117;
+      padding: 6px 14px;
       border-radius: 20px;
       font-size: 13px;
-      font-weight: bold;
+      font-weight: 800;
+      letter-spacing: 0.5px;
     }
     .markdown-body {
       background-color: transparent !important;
+      color: #c9d1d9 !important;
     }
     table {
       border-collapse: collapse;
@@ -50,12 +52,11 @@
       margin: 16px 0;
     }
     th, td {
-      border: 1px solid #30363d;
-      padding: 10px;
-      text-align: left;
+      border: 1px solid #30363d !important;
+      padding: 10px !important;
     }
     th {
-      background-color: #21262d;
+      background-color: #161b22 !important;
     }
   </style>
 </head>
@@ -64,22 +65,16 @@
     <div class="header-bar">
       <div>
         <h2 style="margin: 0; color: #58a6ff;">🚀 krishnakaushik1322007-ai / README.md</h2>
-        <span style="color: #8b949e; font-size: 14px;">Live Preview of your Enhanced GitHub Profile</span>
+        <span style="color: #8b949e; font-size: 14px;">Live Interactive Preview of your Enhanced GitHub Profile</span>
       </div>
-      <span class="badge-preview">AI Engineer & Data Scientist</span>
+      <span class="badge-preview">AI ENGINEER &amp; DATA SCIENTIST</span>
     </div>
     <div id="content" class="markdown-body"></div>
   </div>
 
   <script>
-    fetch('README.md')
-      .then(res => res.text())
-      .then(text => {
-        document.getElementById('content').innerHTML = marked.parse(text);
-      })
-      .catch(err => {
-        console.error(err);
-      });
+    const rawMarkdown = "<div align=\"center\">\n\n<!-- HEADER ANIMATION -->\n<img src=\"https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24&height=220&section=header&text=Krishna%20Kaushik&fontSize=42&fontAlignY=38&desc=%E2%9C%A8%20AI%20Engineer%20%7C%20Data%20Scientist%20%7C%20ML%20Specialist%20%E2%9C%A8&descAlignY=62&descAlign=50&animation=twinkling\" width=\"100%\" alt=\"Header Banner\" />\n\n<!-- TYPING SVG ANIMATION -->\n<a href=\"https://github.com/krishnakaushik1322007-ai\">\n  <img src=\"https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=3000&pause=1000&color=00F5D4&center=true&vCenter=true&width=750&lines=Building+Intelligent+Autonomous+AI+Agents+%26+LLMs;Deep+Learning+%E2%80%A2+PyTorch+%E2%80%A2+Transformers+%E2%80%A2+Diffusion;Data+Science+%E2%80%A2+Predictive+Analytics+%E2%80%A2+Statistical+Modeling;Optimizing+High-Performance+C%2B%2B+%26+Python+AI+Pipelines;Turning+Raw+Data+into+Scalable%2C+Impactful+AI+Solutions\" alt=\"Typing SVG\" />\n</a>\n\n<br/>\n\n<!-- PROFILE VIEWER BADGE & STATUS -->\n[![Profile Views](https://komarev.com/ghpvc/?username=krishnakaushik1322007-ai&color=00F5D4&style=for-the-badge&label=PROFILE+VIEWS)](https://github.com/krishnakaushik1322007-ai)\n[![License: MIT](https://img.shields.io/badge/Status-Innovating%20%26%20Building-7928CA?style=for-the-badge&logo=codefactor&logoColor=white)](https://github.com/krishnakaushik1322007-ai)\n[![Open To Collaborate](https://img.shields.io/badge/Open%20To-AI%20%26%20Data%20Science%20Roles-00C49F?style=for-the-badge&logo=aircall&logoColor=white)](mailto:kaushikkrishna132@gmail.com)\n\n</div>\n\n<br/>\n\n---\n\n### \ud83d\ude80 **About Me**\n\n```yaml\nname: Krishna Kaushik\nrole: AI Engineer & Data Scientist\npassion: Bridging Theoretical Machine Learning with Production-Grade Scalable Systems\nmission: Transforming massive raw data lakes into intelligent, self-learning AI ecosystems\nsuperpower: Low-level computational efficiency (C/C++) coupled with high-level AI orchestration (PyTorch, LLMs)\n```\n\n- \ud83d\udd2d **Currently Pioneering**: Next-generation Autonomous AI Agents, Multi-Modal RAG architectures, and High-Performance ML Inference engines.\n- \ud83e\udde0 **Research & Exploration**: Fine-tuning Large Language Models (PEFT/LoRA), Attention Mechanisms, Graph Neural Networks, and Probabilistic Modeling.\n- \ud83d\udcca **Data Science Mastery**: End-to-End Predictive Modeling, Exploratory Data Analysis, Feature Engineering, Bayesian Inference, and Big Data Pipelines.\n- \u26a1 **Engineering Core**: Proficient in both modern deep learning frameworks (**PyTorch**, **TensorFlow**, **Hugging Face**) and high-speed compiled programming (**C**, **C++**).\n- \ud83d\udcac **Ask me about**: Transformers, Diffusion Models, Vector Databases, Python optimization, and Machine Learning algorithms from scratch.\n\n<br/>\n\n---\n\n### \ud83d\udee0\ufe0f **Skills & Technological Arsenals**\n\n<div align=\"center\">\n\n#### \ud83e\udde0 **Artificial Intelligence & Deep Learning**\n<p>\n  <img src=\"https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black\" />\n  <img src=\"https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/XGBoost-15B8EC?style=for-the-badge&logo=xgboost&logoColor=white\" />\n</p>\n\n#### \ud83e\udd16 **Generative AI, LLMs & Multi-Agent Systems**\n<p>\n  <img src=\"https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/LlamaIndex-333333?style=for-the-badge&logo=meta&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/OpenAI%20API-412991?style=for-the-badge&logo=openai&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Google%20Gemini-8E75C2?style=for-the-badge&logo=googlebard&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/ChromaDB-FF6600?style=for-the-badge&logo=databricks&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Vector%20Search%20(FAISS)-0055FF?style=for-the-badge&logo=meta&logoColor=white\" />\n</p>\n\n#### \ud83d\udcca **Data Science, Analytics & Big Data**\n<p>\n  <img src=\"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Polars-CD792C?style=for-the-badge&logo=rust&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logo=python&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white\" />\n</p>\n\n#### \u2699\ufe0f **MLOps, Cloud & Production Deployment**\n<p>\n  <img src=\"https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black\" />\n  <img src=\"https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white\" />\n</p>\n\n#### \u26a1 **High-Performance Computing & Systems**\n<p>\n  <img src=\"https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black\" />\n  <img src=\"https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white\" />\n  <img src=\"https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white\" />\n</p>\n\n</div>\n\n<br/>\n\n---\n\n### \ud83d\udcca **Live Dynamic Performance & Metrics**\n\n<div align=\"center\">\n\n<table border=\"0\">\n  <tr>\n    <td align=\"center\">\n      <img src=\"https://github-readme-stats-sigma-five.vercel.app/api?username=krishnakaushik1322007-ai&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F5D4&icon_color=7928CA&text_color=C9D1D9\" height=\"180\" alt=\"GitHub Stats\" />\n    </td>\n    <td align=\"center\">\n      <img src=\"https://github-readme-streak-stats.herokuapp.com/?user=krishnakaushik1322007-ai&theme=tokyonight&hide_border=true&background=0D1117&ring=00F5D4&fire=FF007F&currStreakLabel=00F5D4\" height=\"180\" alt=\"GitHub Streak\" />\n    </td>\n  </tr>\n</table>\n\n<br/>\n\n<img src=\"https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=krishnakaushik1322007-ai&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F5D4&text_color=C9D1D9\" height=\"165\" alt=\"Top Languages\" />\n\n</div>\n\n<br/>\n\n---\n\n### \ud83d\udc0d **Contribution Graph Snake**\n\n<div align=\"center\">\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"./assets/github-contribution-grid-snake-dark.svg\">\n  <source media=\"(prefers-color-scheme: light)\" srcset=\"./assets/github-contribution-grid-snake-dark.svg\">\n  <img alt=\"GitHub Contribution Snake\" src=\"./assets/github-contribution-grid-snake-dark.svg\" width=\"100%\" />\n</picture>\n\n</div>\n\n<br/>\n\n---\n\n### \ud83c\udf1f **Featured Engineering Showcases**\n\n| Project | Domain | Architecture & Technologies | Details |\n| :--- | :--- | :--- | :--- |\n| [\ud83e\udd16 **Generative-AI**](https://github.com/krishnakaushik1322007-ai/Generative-AI) | `Generative AI & LLMs` | `Transformers`, `Prompt Engineering`, `LLMs`, `Python` | Comprehensive exploration and implementation of foundational GenAI architectures, diffusion models, and neural synthesizers. |\n| [\u26a1 **C++ Project Build**](https://github.com/krishnakaushik1322007-ai/Cpp-Project-build-2nd-Sem) | `High-Performance Systems` | `C++`, `OOP`, `Memory Optimization`, `Algorithms` | Robust, object-oriented system engineering focusing on speed, structural integrity, and computational efficiency. |\n| [\ud83d\udcbb **C Programming Systems**](https://github.com/krishnakaushik1322007-ai/C-programming) | `Core Systems Engineering` | `C`, `Data Structures`, `Pointers`, `Low-Level Optimization` | High-efficiency algorithms, pointer arithmetic, memory management, and fundamental computer science logic. |\n| [\ud83d\udd2e **Autonomous RAG Agent Engine**](https://github.com/krishnakaushik1322007-ai) *(In Progress)* | `Agentic AI & Information Retrieval` | `LangChain`, `ChromaDB`, `FastAPI`, `OpenAI / Gemini` | Multi-document hybrid search engine featuring recursive summarization, semantic re-ranking, and agentic query decomposition. |\n| [\ud83d\udcc8 **End-to-End Predictive ML Suite**](https://github.com/krishnakaushik1322007-ai) *(In Progress)* | `Data Science & MLOps` | `Scikit-Learn`, `XGBoost`, `Pandas`, `Streamlit`, `Docker` | Production-grade machine learning pipeline with automated EDA, hyperparameter tuning, drift monitoring, and live inference dashboard. |\n\n<br/>\n\n---\n\n### \ud83e\udd1d **Connect & Collaborate**\n\n<div align=\"center\">\n\n[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)\n[![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://kaggle.com)\n[![X / Twitter](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com)\n[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com)\n[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kaushikkrishna132@gmail.com)\n[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com)\n\n<br/>\n\n*\"The best way to predict the future is to invent the autonomous algorithms that shape it.\"*\n\n<br/>\n\n<!-- FOOTER ANIMATION -->\n<img src=\"https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24&height=100&section=footer\" width=\"100%\" alt=\"Footer Banner\" />\n\n</div>\n";
+    document.getElementById('content').innerHTML = marked.parse(rawMarkdown);
   </script>
 </body>
 </html>
