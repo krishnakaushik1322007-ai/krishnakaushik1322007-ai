@@ -1,7 +1,7 @@
 <div align="center">
 
-  <!-- HERO BANNER -->
-  <img src="./assets/banner.jpg" alt="Krishna Kaushik - AI Engineer Banner" width="100%" style="border-radius: 12px; border: 1px solid #00F0FF44;" />
+  <!-- HERO BANNER (ANIMATED) -->
+  <img src="./assets/banner.gif" alt="Krishna Kaushik - AI Engineer Animated Banner" width="100%" style="border-radius: 12px; border: 1px solid #00F0FF44;" />
 
   <br/><br/>
 
