@@ -138,7 +138,7 @@ identity:
 | 🤖 **[Generative-AI](https://github.com/krishnakaushik1322007-ai/Generative-AI)** | `Generative AI & LLMs` | Foundational GenAI architectures, transformer attention, diffusion models, and neural synthesizers. | [Inspect Code ↗](https://github.com/krishnakaushik1322007-ai/Generative-AI) |
 | ⚡ **[Cpp-Project-build-2nd-Sem](https://github.com/krishnakaushik1322007-ai/Cpp-Project-build-2nd-Sem)** | `High-Performance Systems` | Object-oriented systems engineering with memory layout optimization, cache coherence, and robust architecture. | [Inspect Code ↗](https://github.com/krishnakaushik1322007-ai/Cpp-Project-build-2nd-Sem) |
 | 💻 **[C-programming](https://github.com/krishnakaushik1322007-ai/C-programming)** | `Core Systems Engineering` | Low-level algorithms, pointer arithmetic, memory management, and fundamental computational logic. | [Inspect Code ↗](https://github.com/krishnakaushik1322007-ai/C-programming) |
-| 🌌 **Autonomous RAG Agent** | `Agentic Reasoning & Search` | Multi-document hybrid search featuring recursive summarization, semantic re-ranking, and dynamic query routing. | *(In Active Dev)* |
+| 🌌 **[Agentic-RAG-Engine](https://github.com/krishnakaushik1322007-ai/Agentic-RAG-Engine)** | `Agentic Reasoning & Search` | Enterprise-grade self-reflective RAG with dynamic query routing, hybrid vector retrieval, and hallucination verification. | [Inspect Code ↗](https://github.com/krishnakaushik1322007-ai/Agentic-RAG-Engine) |
 | ⚡ **UltraInfer-Serving** | `Inference Optimization` | High-throughput distributed serving gateway with dynamic KV-cache paging, continuous batching, and CUDA acceleration. | *(In Active Dev)* |
 
 ---
