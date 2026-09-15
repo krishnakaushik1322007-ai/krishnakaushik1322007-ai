@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 210" width="900" height="210" fill="none">
+  <title>Krishna Kaushik — Telemetry &amp; Neural Activity Dashboard</title>
+  <desc>Real-Time GitHub Compute Metrics &amp; AI Systems Telemetry for Krishna Kaushik</desc>
+
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="telem-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040714" />
+      <stop offset="50%" stop-color="#090e24" />
+      <stop offset="100%" stop-color="#050816" />
+    </linearGradient>
+
+    <!-- Border Neon Gradient -->
+    <linearGradient id="telem-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.75" />
+      <stop offset="35%" stop-color="#3b82f6" stop-opacity="0.4" />
+      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.75" />
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a122c" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#060a19" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Micro-Grid Pattern -->
+    <pattern id="telem-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1e293b" stroke-width="0.35" stroke-opacity="0.45" />
+      <circle cx="24" cy="24" r="0.6" fill="#00f0ff" fill-opacity="0.18" />
+    </pattern>
+
+    <!-- Language Progress Gradients -->
+    <linearGradient id="py-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="cpp-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="c-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'JetBrains Mono', 'Fira Code', monospace; }
+    .sans { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif; }
+    
+    .panel-title { font-size: 8px; font-weight: 800; fill: #00f0ff; letter-spacing: 1.6px; }
+    .panel-title-purple { font-size: 8px; font-weight: 800; fill: #c084fc; letter-spacing: 1.6px; }
+    
+    .stat-label { font-size: 8.5px; font-weight: 500; fill: #94a3b8; letter-spacing: 0.6px; }
+    .stat-val { font-size: 9px; font-weight: 700; fill: #f8fafc; letter-spacing: 0.5px; }
+    .stat-val-cyan { font-size: 9px; font-weight: 800; fill: #00f0ff; letter-spacing: 0.5px; }
+    .stat-val-green { font-size: 9px; font-weight: 800; fill: #00ff9d; letter-spacing: 0.5px; }
+    .stat-val-purple { font-size: 9px; font-weight: 800; fill: #c084fc; letter-spacing: 0.5px; }
+
+    .lang-lbl { font-size: 7.5px; font-weight: 700; letter-spacing: 0.5px; }
+    .lang-pct { font-size: 7.5px; font-weight: 800; fill: #f8fafc; }
+  </style>
+
+  <!-- Outer Shell & Background -->
+  <rect x="1" y="1" width="898" height="208" rx="12" fill="url(#telem-bg)" stroke="url(#telem-border)" stroke-width="1.2" />
+  <rect x="2" y="2" width="896" height="206" rx="11" fill="url(#telem-grid)" />
+
+  <!-- Corner Sci-Fi Brackets -->
+  <path d="M 12 24 L 12 12 L 24 12" fill="none" stroke="#00f0ff" stroke-width="1.2" opacity="0.75" />
+  <path d="M 888 24 L 888 12 L 876 12" fill="none" stroke="#a855f7" stroke-width="1.2" opacity="0.75" />
+  <path d="M 12 186 L 12 198 L 24 198" fill="none" stroke="#a855f7" stroke-width="1.2" opacity="0.75" />
+  <path d="M 888 186 L 888 198 L 876 198" fill="none" stroke="#00f0ff" stroke-width="1.2" opacity="0.75" />
+
+  <!-- ================================================================= -->
+  <!-- PANEL 1 (LEFT): GITHUB COMPUTATIONAL & CODE TELEMETRY             -->
+  <!-- ================================================================= -->
+  <g transform="translate(30, 22)">
+    <rect x="0" y="0" width="404" height="166" rx="8" fill="url(#card-bg)" stroke="#1e293b" stroke-width="1" />
+    <path d="M 0 0 L 14 0 L 0 14 Z" fill="#00f0ff" opacity="0.85" />
+
+    <!-- Panel Header -->
+    <g transform="translate(16, 16)">
+      <circle cx="0" cy="0" r="3" fill="#00f0ff">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="8" y="2.5" class="mono panel-title">SYS // GITHUB COMPUTE TELEMETRY</text>
+      <text x="372" y="2.5" class="mono" font-size="7.5" font-weight="700" fill="#00ff9d" text-anchor="end">SYNCED</text>
+      <line x1="-6" y1="10" x2="372" y2="10" stroke="#1e293b" stroke-width="0.8" />
+    </g>
+
+    <!-- Key Metrics Grid -->
+    <g transform="translate(16, 44)">
+      <!-- Metric 1: Commits -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="0" class="mono stat-label">TOTAL PUSHES</text>
+        <text x="175" y="0" class="mono stat-val-cyan" text-anchor="end">35+ Verified</text>
+      </g>
+      
+      <!-- Metric 2: Repos -->
+      <g transform="translate(200, 0)">
+        <text x="0" y="0" class="mono stat-label">ACTIVE REPOSITORIES</text>
+        <text x="172" y="0" class="mono stat-val" text-anchor="end">5 Systems</text>
+      </g>
+
+      <!-- Metric 3: Focus Area -->
+      <g transform="translate(0, 22)">
+        <text x="0" y="0" class="mono stat-label">AI SPECIALIZATION</text>
+        <text x="175" y="0" class="mono stat-val" text-anchor="end">LLMs • RAG • vLLM</text>
+      </g>
+
+      <!-- Metric 4: Code Quality -->
+      <g transform="translate(200, 22)">
+        <text x="0" y="0" class="mono stat-label">PIPELINE INTEGRITY</text>
+        <text x="172" y="0" class="mono stat-val-green" text-anchor="end">100% Passing</text>
+      </g>
+
+      <line x1="0" y1="36" x2="372" y2="36" stroke="#1e293b" stroke-width="0.8" />
+    </g>
+
+    <!-- Language Distribution Breakdown -->
+    <g transform="translate(16, 100)">
+      <text x="0" y="0" class="mono" font-size="7" font-weight="700" fill="#64748b" letter-spacing="1px">PRIMARY LANGUAGE DISTRIBUTION</text>
+      
+      <!-- Progress Bar Track -->
+      <g transform="translate(0, 10)">
+        <!-- Background Track -->
+        <rect x="0" y="0" width="372" height="7" rx="3.5" fill="#0c1429" stroke="#1e293b" stroke-width="0.5" />
+        
+        <!-- Python Segment (50%) -->
+        <rect x="0" y="0" width="186" height="7" rx="3.5" fill="url(#py-grad)" />
+        
+        <!-- C++ Segment (30%) -->
+        <rect x="186" y="0" width="112" height="7" fill="url(#cpp-grad)" />
+        
+        <!-- C Segment (20%) -->
+        <rect x="298" y="0" width="74" height="7" rx="3.5" fill="url(#c-grad)" />
+      </g>
+
+      <!-- Language Badges -->
+      <g transform="translate(0, 32)">
+        <!-- Python -->
+        <circle cx="4" cy="0" r="3" fill="#00f0ff" />
+        <text x="12" y="3" class="mono lang-lbl" fill="#38bdf8">Python <tspan class="lang-pct">50%</tspan></text>
+
+        <!-- C++ -->
+        <circle cx="130" cy="0" r="3" fill="#c084fc" />
+        <text x="138" y="3" class="mono lang-lbl" fill="#c084fc">C++ <tspan class="lang-pct">30%</tspan></text>
+
+        <!-- C -->
+        <circle cx="250" cy="0" r="3" fill="#60a5fa" />
+        <text x="258" y="3" class="mono lang-lbl" fill="#60a5fa">C <tspan class="lang-pct">20%</tspan></text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- PANEL 2 (RIGHT): FRONTIER AI SYSTEMS & SERVING TELEMETRY          -->
+  <!-- ================================================================= -->
+  <g transform="translate(466, 22)">
+    <rect x="0" y="0" width="404" height="166" rx="8" fill="url(#card-bg)" stroke="#1e293b" stroke-width="1" />
+    <path d="M 404 0 L 390 0 L 404 14 Z" fill="#a855f7" opacity="0.85" />
+
+    <!-- Panel Header -->
+    <g transform="translate(16, 16)">
+      <circle cx="0" cy="0" r="3" fill="#c084fc">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite" />
+      </circle>
+      <text x="8" y="2.5" class="mono panel-title-purple">SYS // INFERENCE &amp; MODEL BENCHMARKS</text>
+      <text x="372" y="2.5" class="mono" font-size="7.5" font-weight="700" fill="#00f0ff" text-anchor="end">FP8 ENGINE</text>
+      <line x1="-6" y1="10" x2="372" y2="10" stroke="#1e293b" stroke-width="0.8" />
+    </g>
+
+    <!-- AI Architecture Metrics -->
+    <g transform="translate(16, 44)">
+      <!-- Metric 1: Inference Engine -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="0" class="mono stat-label">INFERENCE SERVING</text>
+        <text x="372" y="0" class="mono stat-val-cyan" text-anchor="end">vLLM + PagedAttention</text>
+      </g>
+
+      <!-- Metric 2: Throughput -->
+      <g transform="translate(0, 22)">
+        <text x="0" y="0" class="mono stat-label">CLUSTER THROUGHPUT</text>
+        <text x="372" y="0" class="mono stat-val-green" text-anchor="end">3,420 tokens / sec</text>
+      </g>
+
+      <!-- Metric 3: Context Capacity -->
+      <g transform="translate(0, 44)">
+        <text x="0" y="0" class="mono stat-label">CONTEXT WINDOW (RoPE)</text>
+        <text x="372" y="0" class="mono stat-val" text-anchor="end">128k Tokens (θ=500k)</text>
+      </g>
+
+      <!-- Metric 4: Quantization -->
+      <g transform="translate(0, 66)">
+        <text x="0" y="0" class="mono stat-label">PRECISION &amp; MEMORY</text>
+        <text x="372" y="0" class="mono stat-val-purple" text-anchor="end">FP8 / AWQ / QLoRA</text>
+      </g>
+
+      <!-- Metric 5: TTFT Latency -->
+      <g transform="translate(0, 88)">
+        <text x="0" y="0" class="mono stat-label">TTFT TIME-TO-FIRST-TOKEN</text>
+        <text x="372" y="0" class="mono stat-val-cyan" text-anchor="end">11.8 ms (P99: 14.2ms)</text>
+      </g>
+
+      <line x1="0" y1="100" x2="372" y2="100" stroke="#1e293b" stroke-width="0.8" />
+    </g>
+
+    <!-- Bottom Status Bar -->
+    <g transform="translate(16, 156)">
+      <circle cx="2" cy="-2" r="2.5" fill="#00ff9d" />
+      <text x="10" y="1" class="mono" font-size="7.5" font-weight="700" fill="#64748b">
+        SWARM AGENT REASONING: <tspan fill="#00ff9d">LOCKED // DETERMINISTIC</tspan>
+      </text>
+      <text x="372" y="1" class="mono" font-size="7.5" font-weight="700" fill="#38bdf8" text-anchor="end">
+        CACHE EFFICIENCY: <tspan fill="#00f0ff">99.4%</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

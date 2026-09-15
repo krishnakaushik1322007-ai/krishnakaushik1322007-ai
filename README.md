@@ -147,31 +147,24 @@ identity:
 
 <div align="center">
 
-  <table border="0" style="border: none;">
-    <tr style="border: none;">
-      <td width="50%" align="center" style="border: none;">
-        <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=krishnakaushik1322007-ai&show_icons=true&theme=tokyonight&hide_border=false&bg_color=0D1117&title_color=00F0FF&icon_color=B026FF&text_color=C9D1D9&border_color=00F0FF44&count_private=true" alt="GitHub Stats" width="100%" />
-      </td>
-      <td width="50%" align="center" style="border: none;">
-        <img src="https://streak-stats.demolab.com?user=krishnakaushik1322007-ai&theme=tokyonight&background=0D1117&border=00F0FF44&stroke=00F0FF&ring=B026FF&fire=00F0FF&currStreakNum=00F0FF&sideNums=C9D1D9&sideLabels=8B949E&dates=8B949E" alt="GitHub Streak" width="100%" />
-      </td>
-    </tr>
-    <tr style="border: none;">
-      <td colspan="2" align="center" style="border: none;">
-        <br/>
-        <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=krishnakaushik1322007-ai&layout=compact&theme=tokyonight&hide_border=false&bg_color=0D1117&title_color=00F0FF&text_color=C9D1D9&border_color=00F0FF44" alt="Top Languages" width="60%" />
-      </td>
-    </tr>
-  </table>
+  <!-- COGNITIVE & GITHUB COMPUTE TELEMETRY DASHBOARD -->
+  <img src="./assets/telemetry.svg" alt="Krishna Kaushik - Compute & AI Telemetry Dashboard" width="100%" style="border-radius: 10px; border: 1px solid #00F0FF33;" />
 
-  <br/>
+  <br/><br/>
 
-  <!-- CONTRIBUTION GRAPH SNAKE -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg">
-    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg" width="100%" />
-  </picture>
+  <!-- NEURAL ACTIVITY // CONTINUOUS COMMIT STREAM -->
+  <div style="background: #060a17; border-radius: 10px; border: 1px solid #1e293b; padding: 16px; margin-top: 10px;">
+    <p align="center">
+      <img src="https://img.shields.io/badge/NEURAL_ACTIVITY-CONTINUOUS%20COMMIT%20STREAM-00F0FF?style=for-the-badge&logo=github&logoColor=0D1117&labelColor=0D1117" alt="Neural Activity Stream" />
+      <img src="https://img.shields.io/badge/SYNAPSE_CYCLE-ACTIVE%2024H%20CRON-B026FF?style=for-the-badge&logo=probot&logoColor=B026FF&labelColor=0D1117" alt="Synapse Cycle" />
+    </p>
+
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg">
+      <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg" width="100%" />
+    </picture>
+  </div>
 
 </div>
 
