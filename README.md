@@ -49,7 +49,7 @@ identity:
 - 🏙️ **Enterprise Civic & Campus SaaS Platforms**: Built **[CivicLens](https://github.com/krishnakaushik1322007-ai/CivicLens)** (consolidating 40.4% duplicate 311 noise via PostGIS geospatial math & Gemini 2.5 Flash vision triage) and **[CampusOS AI](https://github.com/krishnakaushik1322007-ai/campus-OS-AI)** (multi-tenant role-isolated platform with 14 PostgreSQL RLS tables).
 - ⚡ **High-Throughput Inference & Hardware Acceleration**: Tuning vLLM PagedAttention, continuous batching, dynamic speculative decoding, and quantization (FP8, AWQ, QLoRA) for sub-12ms TTFT.
 - 🛠️ **Bare-Metal Systems Craftsmanship**: Proficient in cache locality, low-level memory allocation, pointer arithmetic, and algorithmic optimization in **C/C++**, seamlessly bridged into **PyTorch** and **TypeScript** ecosystems.
-- 📬 **Reach Out & Collaborate**: Open for frontier AI engineering collaborations, high-throughput systems research, and innovative projects at **[kaushikkrishna132@gmail.com](mailto:kaushikkrishna132@gmail.com)**.
+- 📬 **Reach Out & Collaborate**: Open for frontier AI engineering collaborations, high-throughput systems research, and innovative projects at **[kaushikkrishna132@gmail.com](mailto:krishnakaushik1322007@gmail.com)**.
 
 ---
 
