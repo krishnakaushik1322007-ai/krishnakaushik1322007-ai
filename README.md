@@ -7,7 +7,7 @@
 
   <!-- ANIMATED TYPING HEADER -->
   <a href="https://github.com/krishnakaushik1322007-ai">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=23&pause=1200&color=00F0FF&background=0D111700&center=true&vCenter=true&width=820&lines=Krishna+Kaushik+%7C+AI+Systems+Architect+%26+Full-Stack+AI+Engineer;Building+Autonomous+Agentic+Swarms+%26+Self-Reflective+RAG;Pioneering+Enterprise+CivicLens+%26+Multi-Tenant+CampusOS+AI;Optimizing+vLLM+Inference%2C+PostGIS+Spatial+Engines+%26+CUDA;Bridging+Low-Level+C%2B%2B%2FCUDA+with+PyTorch+%26+Next.js+16;Turning+Raw+Compute+into+Scalable+Cognitive+Intelligence" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1200&color=00F0FF&background=0D111700&center=true&vCenter=true&width=900&lines=Krishna+Kaushik+%7C+AI+Engineer+%26+Systems+Architect;Building+Autonomous+Agents+%26+Self-Reflective+RAG;Pioneering+CivicLens+%26+Multi-Tenant+CampusOS+AI;Optimizing+vLLM+Inference%2C+PostGIS+%26+CUDA;Bridging+Low-Level+C%2B%2B%2FCUDA+with+Modern+PyTorch;Turning+Raw+Compute+into+Scalable+Intelligence" alt="Typing SVG" />
   </a>
 
   <br/>
