@@ -186,18 +186,18 @@ identity:
   <br/><br/>
 
   <!-- NEURAL ACTIVITY // CONTINUOUS COMMIT STREAM -->
-  <div style="background: #060a17; border-radius: 10px; border: 1px solid #1e293b; padding: 16px; margin-top: 10px;">
-    <p align="center">
-      <img src="https://img.shields.io/badge/NEURAL_ACTIVITY-CONTINUOUS%20COMMIT%20STREAM-00F0FF?style=for-the-badge&logo=github&logoColor=0D1117&labelColor=0D1117" alt="Neural Activity Stream" />
-      <img src="https://img.shields.io/badge/SYNAPSE_CYCLE-ACTIVE%2024H%20CRON-B026FF?style=for-the-badge&logo=probot&logoColor=B026FF&labelColor=0D1117" alt="Synapse Cycle" />
-    </p>
+  <p align="center">
+    <img src="https://img.shields.io/badge/NEURAL_ACTIVITY-CONTINUOUS%20COMMIT%20STREAM-00F0FF?style=for-the-badge&logo=github&logoColor=0D1117&labelColor=0D1117" alt="Neural Activity Stream" />
+    <img src="https://img.shields.io/badge/SYNAPSE_CYCLE-ACTIVE%2024H%20CRON-B026FF?style=for-the-badge&logo=probot&logoColor=B026FF&labelColor=0D1117" alt="Synapse Cycle" />
+  </p>
 
+  <p align="center">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg">
-      <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/main/assets/github-contribution-grid-snake-dark.svg" width="100%" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/output/github-contribution-grid-snake-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/output/github-contribution-grid-snake.svg">
+      <img alt="GitHub Contribution Grid Snake" src="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/output/github-contribution-grid-snake-dark.svg" width="100%" />
     </picture>
-  </div>
+  </p>
 
 </div>
 
