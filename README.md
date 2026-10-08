@@ -20,7 +20,7 @@
     <img src="https://img.shields.io/badge/SYSTEM-ONLINE%20%2F%2F%20ACTIVE-00F0FF?style=for-the-badge&logo=statuspage&logoColor=0D1117&labelColor=0D1117" alt="Status" />
     <img src="https://img.shields.io/badge/FOCUS-AGENTS%20%E2%80%A2%20RAG%20%E2%80%A2%20INFERENCE-B026FF?style=for-the-badge&logo=openai&logoColor=B026FF&labelColor=0D1117" alt="Focus" />
     <img src="https://img.shields.io/badge/PLATFORMS-CIVICLENS%20%E2%80%A2%20CAMPUSOS-39FF14?style=for-the-badge&logo=fastapi&logoColor=39FF14&labelColor=0D1117" alt="Platforms" />
-    <a href="mailto:kaushikkrishna132@gmail.com">
+    <a href="mailto:krishnakaushik1322007@gmail.com">
       <img src="https://img.shields.io/badge/COLLAB-OPEN%20FOR%20VENTURES-FF007F?style=for-the-badge&logo=github&logoColor=FF007F&labelColor=0D1117" alt="Collab" />
     </a>
   </p>
@@ -227,8 +227,8 @@ identity:
     <img src="https://img.shields.io/badge/LeetCode-Problems-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" />
   </a>
   &nbsp;
-  <a href="mailto:kaushikkrishna132@gmail.com">
-    <img src="https://img.shields.io/badge/Email-kaushikkrishna132%40gmail.com-00F0FF?style=for-the-badge&logo=gmail&logoColor=black" alt="Email" />
+  <a href="mailto:krishnakaushik1322007@gmail.com">
+    <img src="https://img.shields.io/badge/Email-krishnakaushik1322007%40gmail.com-00F0FF?style=for-the-badge&logo=gmail&logoColor=black" alt="Email" />
   </a>
 
   <br/><br/>
