@@ -35,6 +35,10 @@
       <stop offset="0%" stop-color="#00f0ff" />
       <stop offset="100%" stop-color="#38bdf8" />
     </linearGradient>
+    <linearGradient id="ts-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3178c6" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
     <linearGradient id="cpp-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#a855f7" />
       <stop offset="100%" stop-color="#ec4899" />
@@ -94,25 +98,25 @@
       <!-- Metric 1: Commits -->
       <g transform="translate(0, 0)">
         <text x="0" y="0" class="mono stat-label">TOTAL PUSHES</text>
-        <text x="175" y="0" class="mono stat-val-cyan" text-anchor="end">35+ Verified</text>
+        <text x="175" y="0" class="mono stat-val-cyan" text-anchor="end">150+ Verified</text>
       </g>
       
       <!-- Metric 2: Repos -->
       <g transform="translate(200, 0)">
         <text x="0" y="0" class="mono stat-label">ACTIVE REPOSITORIES</text>
-        <text x="172" y="0" class="mono stat-val" text-anchor="end">5 Systems</text>
+        <text x="172" y="0" class="mono stat-val" text-anchor="end">8 Systems</text>
       </g>
 
       <!-- Metric 3: Focus Area -->
       <g transform="translate(0, 22)">
         <text x="0" y="0" class="mono stat-label">AI SPECIALIZATION</text>
-        <text x="175" y="0" class="mono stat-val" text-anchor="end">LLMs • RAG • vLLM</text>
+        <text x="175" y="0" class="mono stat-val" text-anchor="end">LLMs • Agents • RAG</text>
       </g>
 
       <!-- Metric 4: Code Quality -->
       <g transform="translate(200, 22)">
         <text x="0" y="0" class="mono stat-label">PIPELINE INTEGRITY</text>
-        <text x="172" y="0" class="mono stat-val-green" text-anchor="end">100% Passing</text>
+        <text x="172" y="0" class="mono stat-val-green" text-anchor="end">100% (108 Tests)</text>
       </g>
 
       <line x1="0" y1="36" x2="372" y2="36" stroke="#1e293b" stroke-width="0.8" />
@@ -127,29 +131,36 @@
         <!-- Background Track -->
         <rect x="0" y="0" width="372" height="7" rx="3.5" fill="#0c1429" stroke="#1e293b" stroke-width="0.5" />
         
-        <!-- Python Segment (50%) -->
-        <rect x="0" y="0" width="186" height="7" rx="3.5" fill="url(#py-grad)" />
+        <!-- Python Segment (45%) -->
+        <rect x="0" y="0" width="167" height="7" rx="3.5" fill="url(#py-grad)" />
         
-        <!-- C++ Segment (30%) -->
-        <rect x="186" y="0" width="112" height="7" fill="url(#cpp-grad)" />
+        <!-- TypeScript Segment (25%) -->
+        <rect x="167" y="0" width="93" height="7" fill="url(#ts-grad)" />
         
-        <!-- C Segment (20%) -->
-        <rect x="298" y="0" width="74" height="7" rx="3.5" fill="url(#c-grad)" />
+        <!-- C++ Segment (20%) -->
+        <rect x="260" y="0" width="74" height="7" fill="url(#cpp-grad)" />
+        
+        <!-- C Segment (10%) -->
+        <rect x="334" y="0" width="38" height="7" rx="3.5" fill="url(#c-grad)" />
       </g>
 
       <!-- Language Badges -->
       <g transform="translate(0, 32)">
         <!-- Python -->
         <circle cx="4" cy="0" r="3" fill="#00f0ff" />
-        <text x="12" y="3" class="mono lang-lbl" fill="#38bdf8">Python <tspan class="lang-pct">50%</tspan></text>
+        <text x="12" y="3" class="mono lang-lbl" fill="#38bdf8">Python <tspan class="lang-pct">45%</tspan></text>
+
+        <!-- TypeScript -->
+        <circle cx="100" cy="0" r="3" fill="#38bdf8" />
+        <text x="108" y="3" class="mono lang-lbl" fill="#38bdf8">TS <tspan class="lang-pct">25%</tspan></text>
 
         <!-- C++ -->
-        <circle cx="130" cy="0" r="3" fill="#c084fc" />
-        <text x="138" y="3" class="mono lang-lbl" fill="#c084fc">C++ <tspan class="lang-pct">30%</tspan></text>
+        <circle cx="190" cy="0" r="3" fill="#c084fc" />
+        <text x="198" y="3" class="mono lang-lbl" fill="#c084fc">C++ <tspan class="lang-pct">20%</tspan></text>
 
         <!-- C -->
-        <circle cx="250" cy="0" r="3" fill="#60a5fa" />
-        <text x="258" y="3" class="mono lang-lbl" fill="#60a5fa">C <tspan class="lang-pct">20%</tspan></text>
+        <circle cx="280" cy="0" r="3" fill="#60a5fa" />
+        <text x="288" y="3" class="mono lang-lbl" fill="#60a5fa">C <tspan class="lang-pct">10%</tspan></text>
       </g>
     </g>
   </g>
