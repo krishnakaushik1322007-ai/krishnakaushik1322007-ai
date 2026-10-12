@@ -1,68 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 185" width="435" height="185" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 195" width="435" height="195" fill="none">
   <defs>
-    <linearGradient id="card-rag-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e0a1f" />
-      <stop offset="100%" stop-color="#05030e" />
+    <style>
+      @keyframes rag-pulse {
+        0%, 100% { fill: #c084fc; filter: drop-shadow(0 0 2px #a855f7); }
+        50% { fill: #f3e8ff; filter: drop-shadow(0 0 6px #c084fc); }
+      }
+      @keyframes rag-border-glow {
+        0%, 100% { stroke: #a855f7; stroke-opacity: 0.8; }
+        50% { stroke: #6b21a8; stroke-opacity: 0.4; }
+      }
+      .node-pulse { animation: rag-pulse 2s ease-in-out infinite; }
+      .r-border { animation: rag-border-glow 4s ease-in-out infinite; }
+    </style>
+
+    <linearGradient id="r-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#110a24" />
+      <stop offset="100%" stop-color="#060310" />
     </linearGradient>
-    <linearGradient id="border-rag" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8" />
-      <stop offset="60%" stop-color="#6b21a8" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.4" />
-    </linearGradient>
-    <radialGradient id="glow-rag" cx="10%" cy="15%" r="50%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.12" />
+    <radialGradient id="r-glow" cx="12%" cy="15%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.14" />
       <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
     </radialGradient>
   </defs>
 
-  <!-- Card Body -->
-  <rect x="0.5" y="0.5" width="434" height="184" rx="10" fill="url(#card-rag-bg)" stroke="url(#border-rag)" stroke-width="1.2" />
-  <rect x="1" y="1" width="433" height="183" rx="10" fill="url(#glow-rag)" />
+  <rect x="0.5" y="0.5" width="434" height="194" rx="10" fill="url(#r-bg)" stroke="#a855f7" stroke-width="1.2" class="r-border" />
+  <rect x="1" y="1" width="433" height="193" rx="10" fill="url(#r-glow)" />
 
   <!-- Top Status Row -->
-  <g transform="translate(18, 20)">
-    <!-- Neural Node Icon -->
-    <circle cx="6" cy="10" r="3.5" fill="#a855f7" />
+  <g transform="translate(18, 18)">
+    <circle cx="6" cy="10" r="4" fill="#a855f7" class="node-pulse" />
     <circle cx="16" cy="6" r="3" fill="#c084fc" />
     <circle cx="16" cy="14" r="3" fill="#c084fc" />
     <line x1="6" y1="10" x2="16" y2="6" stroke="#a855f7" stroke-width="1.2" />
     <line x1="6" y1="10" x2="16" y2="14" stroke="#a855f7" stroke-width="1.2" />
 
-    <text x="26" y="14" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="9.5" fill="#c084fc" font-weight="600" letter-spacing="0.5">
-      AGENTIC REASONING // RAG
+    <text x="26" y="14" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="9.5" fill="#c084fc" font-weight="700" letter-spacing="0.5">
+      AGENTIC REASONING // RAG ARCHITECTURE
     </text>
 
     <!-- Test Passing Badge -->
-    <rect x="290" y="0" width="108" height="20" rx="10" fill="#052e16" stroke="#10b981" />
-    <text x="344" y="13.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#34d399" font-weight="700" text-anchor="middle">
-      8/8 VERIFIED
+    <rect x="286" y="0" width="112" height="20" rx="10" fill="#052e16" stroke="#00ff9d" />
+    <text x="342" y="13.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#00ff9d" font-weight="800" text-anchor="middle">
+      8/8 TESTS PASSED
     </text>
   </g>
 
-  <!-- Title -->
-  <text x="18" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" fill="#f8fafc">
+  <!-- Title & Subtitle -->
+  <text x="18" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#f8fafc">
     Agentic-RAG-Engine
   </text>
-  <text x="18" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="500" fill="#94a3b8">
+  <text x="18" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600" fill="#94a3b8">
     Self-Reflective Retrieval &amp; Hallucination Verification
   </text>
 
-  <!-- Description -->
-  <text x="18" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
-    Autonomous retrieval engine with semantic intent classification, hybrid
-  </text>
-  <text x="18" y="124" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
-    dense/sparse indexing, and cross-encoder grounded verification.
-  </text>
+  <!-- Bullets for Companies -->
+  <g transform="translate(18, 102)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
+    <text y="0">✦ <tspan fill="#f8fafc" font-weight="600">The Problem:</tspan> Unreliable LLM outputs &amp; hallucinated generation loops.</text>
+    <text y="18">✦ <tspan fill="#f8fafc" font-weight="600">The Innovation:</tspan> Semantic intent routing + hybrid BM25/dense vector search.</text>
+    <text y="36">✦ <tspan fill="#f8fafc" font-weight="600">The Outcome:</tspan> <tspan fill="#00ff9d" font-weight="700">Automated cross-encoder verification</tspan> with 8/8 test suite pass.</text>
+  </g>
 
   <!-- Bottom Bar: Tech & Action Link -->
-  <line x1="18" y1="144" x2="416" y2="144" stroke="#1e293b" />
-  <g transform="translate(18, 163)">
+  <line x1="18" y1="152" x2="416" y2="152" stroke="#1e293b" />
+  <g transform="translate(18, 172)">
     <text font-family="ui-monospace, monospace" font-size="10" fill="#64748b">
-      <tspan fill="#c084fc">Python 3.11</tspan> · FastAPI · Docker · Hybrid Search
+      <tspan fill="#c084fc" font-weight="600">Python 3.11</tspan> · FastAPI · Docker · Hybrid Retrieval
     </text>
-    <text x="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#c084fc" text-anchor="end">
-      Explore Pipeline ↗
+    <text x="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#c084fc" text-anchor="end">
+      Inspect Architecture &amp; Code ↗
     </text>
   </g>
 </svg>

@@ -1,114 +1,111 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 270" width="900" height="270" fill="none">
   <defs>
     <style>
       @keyframes pulse-cyan {
-        0%, 100% { opacity: 0.14; transform: scale(1); }
-        50% { opacity: 0.26; transform: scale(1.08); }
+        0%, 100% { opacity: 0.16; transform: scale(1); }
+        50% { opacity: 0.32; transform: scale(1.08); }
       }
       @keyframes pulse-purple {
-        0%, 100% { opacity: 0.10; transform: scale(1); }
-        50% { opacity: 0.22; transform: scale(1.06); }
+        0%, 100% { opacity: 0.12; transform: scale(1); }
+        50% { opacity: 0.28; transform: scale(1.06); }
       }
       @keyframes ping-ring {
-        0% { r: 3.5; opacity: 0.9; stroke-width: 1.5; }
-        60% { r: 8.5; opacity: 0; stroke-width: 0.5; }
-        100% { r: 8.5; opacity: 0; stroke-width: 0; }
+        0% { r: 3.5; opacity: 0.95; stroke-width: 1.5; }
+        60% { r: 9; opacity: 0; stroke-width: 0.5; }
+        100% { r: 9; opacity: 0; stroke-width: 0; }
       }
       @keyframes cursor-blink {
-        0%, 45% { opacity: 1; }
+        0%, 49% { opacity: 1; }
         50%, 100% { opacity: 0; }
       }
-      @keyframes border-glow {
-        0%, 100% { stroke-opacity: 0.4; }
-        50% { stroke-opacity: 0.9; }
+      @keyframes border-sweep {
+        0%, 100% { stroke: #00f0ff; stroke-opacity: 0.85; filter: drop-shadow(0 0 3px #00f0ff); }
+        33% { stroke: #a855f7; stroke-opacity: 0.85; filter: drop-shadow(0 0 3px #a855f7); }
+        66% { stroke: #00ff9d; stroke-opacity: 0.85; filter: drop-shadow(0 0 3px #00ff9d); }
       }
-      @keyframes glow-bar {
-        0%, 100% { filter: drop-shadow(0 0 1px #38bdf8); }
-        50% { filter: drop-shadow(0 0 5px #38bdf8); }
+      @keyframes shimmer-sweep {
+        0% { transform: translateX(-150px); }
+        100% { transform: translateX(350px); }
       }
-      .ambient-cyan {
+      @keyframes badge-pulse {
+        0%, 100% { opacity: 0.9; }
+        50% { opacity: 1; filter: drop-shadow(0 0 4px #00f0ff); }
+      }
+      .ambient-c {
         transform-origin: 15% 25%;
-        animation: pulse-cyan 6s ease-in-out infinite;
+        animation: pulse-cyan 5s ease-in-out infinite;
       }
-      .ambient-purple {
-        transform-origin: 80% 50%;
-        animation: pulse-purple 8s ease-in-out infinite;
+      .ambient-p {
+        transform-origin: 85% 50%;
+        animation: pulse-purple 7s ease-in-out infinite;
       }
-      .pulse-dot {
-        animation: ping-ring 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+      .ping-effect {
+        animation: ping-ring 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
       }
-      .cursor {
-        animation: cursor-blink 1.1s step-start infinite;
+      .cursor-elem {
+        animation: cursor-blink 1.0s step-start infinite;
       }
-      .outer-frame {
-        animation: border-glow 4s ease-in-out infinite;
+      .animated-frame {
+        animation: border-sweep 6s ease-in-out infinite;
       }
-      .glow-metric {
-        animation: glow-bar 3s ease-in-out infinite;
+      .shimmer-light {
+        animation: shimmer-sweep 3s ease-in-out infinite;
       }
     </style>
 
-    <!-- Background Base Gradient -->
-    <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#020617" />
-      <stop offset="45%" stop-color="#070d1e" />
-      <stop offset="100%" stop-color="#030712" />
+    <!-- Base Gradient -->
+    <linearGradient id="h-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020614" />
+      <stop offset="50%" stop-color="#070e24" />
+      <stop offset="100%" stop-color="#030612" />
     </linearGradient>
 
-    <!-- Outer Border Gradient -->
-    <linearGradient id="hero-border" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
-      <stop offset="35%" stop-color="#818cf8" stop-opacity="0.6" />
-      <stop offset="70%" stop-color="#c084fc" stop-opacity="0.5" />
-      <stop offset="100%" stop-color="#34d399" stop-opacity="0.8" />
-    </linearGradient>
-
-    <!-- Ambient Aurora Radial Glows -->
-    <radialGradient id="aurora-cyan" cx="15%" cy="25%" r="45%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="1" />
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    <!-- Radial Glows -->
+    <radialGradient id="h-glow-cyan" cx="15%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="1" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0" />
     </radialGradient>
-    <radialGradient id="aurora-purple" cx="80%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#818cf8" stop-opacity="1" />
-      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+    <radialGradient id="h-glow-purple" cx="85%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="1" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Grid Pattern -->
-    <pattern id="hero-grid" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.8" fill="#334155" fill-opacity="0.35" />
+    <!-- Dot Pattern -->
+    <pattern id="h-grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#334155" fill-opacity="0.38" />
     </pattern>
 
-    <!-- Glass Panel Fill -->
-    <linearGradient id="card-glass" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b1329" stop-opacity="0.95" />
-      <stop offset="100%" stop-color="#050916" stop-opacity="0.95" />
+    <!-- Glass HUD Fill -->
+    <linearGradient id="hud-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1430" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#050817" stop-opacity="0.95" />
     </linearGradient>
 
-    <!-- Metric Bar Gradients -->
-    <linearGradient id="bar-green" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10b981" />
-      <stop offset="100%" stop-color="#34d399" />
-    </linearGradient>
-    <linearGradient id="bar-blue" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284c7" />
+    <!-- Metric Progress Bars -->
+    <linearGradient id="h-bar-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff9d" />
       <stop offset="100%" stop-color="#38bdf8" />
     </linearGradient>
-    <linearGradient id="bar-purple" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7c3aed" />
-      <stop offset="100%" stop-color="#c084fc" />
+    <linearGradient id="h-bar-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="h-bar-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#a855f7" />
     </linearGradient>
   </defs>
 
-  <!-- Container Box -->
-  <rect x="0.5" y="0.5" width="899" height="259" rx="14" fill="url(#hero-bg)" stroke="url(#hero-border)" stroke-width="1.2" class="outer-frame" />
+  <!-- Container Box with Animated Glowing Border -->
+  <rect x="1" y="1" width="898" height="268" rx="14" fill="url(#h-bg)" stroke="#00f0ff" stroke-width="1.4" class="animated-frame" />
 
-  <!-- Animated Ambient Aurora -->
-  <rect x="1" y="1" width="898" height="258" rx="14" fill="url(#aurora-cyan)" class="ambient-cyan" />
-  <rect x="1" y="1" width="898" height="258" rx="14" fill="url(#aurora-purple)" class="ambient-purple" />
-  <rect x="1" y="34" width="898" height="225" fill="url(#hero-grid)" />
+  <!-- Ambient Pulsing Glow Fields -->
+  <rect x="2" y="2" width="896" height="266" rx="14" fill="url(#h-glow-cyan)" class="ambient-c" />
+  <rect x="2" y="2" width="896" height="266" rx="14" fill="url(#h-glow-purple)" class="ambient-p" />
+  <rect x="2" y="34" width="896" height="234" fill="url(#h-grid)" />
 
-  <!-- Top Window Header Bar -->
-  <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 886 0 C 893.73 0 900 6.27 900 14 L 900 34 L 0 34 Z" fill="#090f1e" />
+  <!-- Top Window Bar -->
+  <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 886 0 C 893.73 0 900 6.27 900 14 L 900 34 L 0 34 Z" fill="#080e22" />
   <line x1="0" y1="34" x2="900" y2="34" stroke="#1e293b" stroke-width="1" />
 
   <!-- Window Dots -->
@@ -116,107 +113,108 @@
   <circle cx="36" cy="17" r="4.5" fill="#f59e0b" opacity="0.9" />
   <circle cx="52" cy="17" r="4.5" fill="#10b981" opacity="0.9" />
 
-  <!-- Window Header Labels -->
+  <!-- Terminal Path + Animated Blinking Cursor -->
   <text x="74" y="21" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#64748b" letter-spacing="0.5">
-    krishna-kaushik // systems-core.sh
+    krishna-kaushik // ai-systems-executive-spec.sh
   </text>
-  <rect x="295" y="11" width="6" height="12" fill="#38bdf8" class="cursor" />
+  <rect x="360" y="11" width="6" height="12" fill="#00f0ff" class="cursor-elem" />
 
-  <text x="876" y="21" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#38bdf8" text-anchor="end" letter-spacing="0.5">
-    ⚡ ACTIVE ARCHITECTURE // 2026
+  <text x="876" y="21" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#00ff9d" text-anchor="end" letter-spacing="0.6">
+    ● ACTIVE CANDIDATE // 2026 COHORT
   </text>
 
-  <!-- LEFT CONTENT COLUMN -->
-  <!-- Live Status Badge with Animated Ripple Ping -->
+  <!-- LEFT COLUMN: EXECUTIVE OVERVIEW -->
+  <!-- Status Badge with Ripple Ring -->
   <g transform="translate(30, 52)">
-    <rect x="0" y="0" width="318" height="23" rx="11.5" fill="#0b132b" stroke="#1e293b" />
-    <circle cx="12" cy="11.5" r="3.5" fill="#10b981" />
-    <circle cx="12" cy="11.5" r="3.5" stroke="#10b981" fill="none" class="pulse-dot" />
-    <text x="26" y="15" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10" fill="#94a3b8" letter-spacing="0.8">
-      ACTIVE // SHOOLINI UNIVERSITY (CSE-AI) // INDIA
+    <rect x="0" y="0" width="330" height="23" rx="11.5" fill="#0b1633" stroke="#1e293b" />
+    <circle cx="12" cy="11.5" r="3.5" fill="#00ff9d" />
+    <circle cx="12" cy="11.5" r="3.5" stroke="#00ff9d" fill="none" class="ping-effect" />
+    <text x="26" y="15" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="10" fill="#cbd5e1" font-weight="600" letter-spacing="0.8">
+      AVAILABLE FOR ROLES · SHOOLINI UNIV (CSE-AI)
     </text>
   </g>
 
   <!-- Name -->
-  <text x="30" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="800" fill="#f8fafc" letter-spacing="-0.6">
+  <text x="30" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="800" fill="#f8fafc" letter-spacing="-0.7">
     Krishna Kaushik
   </text>
 
-  <!-- Subtitle -->
-  <text x="30" y="136" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="13" font-weight="600" fill="#38bdf8" letter-spacing="0.3">
-    AI Systems Architect &amp; Low-Level Computing Researcher
+  <!-- Title / Positioning -->
+  <text x="30" y="137" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="13.5" font-weight="700" fill="#00f0ff" letter-spacing="0.3">
+    AI Systems Engineer &amp; Full-Stack Architect
   </text>
 
-  <!-- Bio -->
-  <text x="30" y="162" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#cbd5e1">
-    Synthesizing bare-metal speed (C/C++, CUDA, memory locality) with
+  <!-- Value Statement for Companies -->
+  <text x="30" y="163" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#cbd5e1">
+    Specializing in production-grade AI platforms, geospatial intelligence,
   </text>
-  <text x="30" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#cbd5e1">
-    autonomous intelligence (PostGIS spatial triage, Gemini, and Agentic RAG).
+  <text x="30" y="181" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#cbd5e1">
+    and low-level computational efficiency (C/C++, PostGIS, Next.js, FastAPI).
   </text>
 
-  <!-- Bottom Pills -->
-  <g transform="translate(30, 204)">
-    <rect x="0" y="0" width="98" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
-    <circle cx="10" cy="12" r="3" fill="#38bdf8" />
-    <text x="18" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#e2e8f0">C++ / CUDA</text>
+  <!-- Bottom Fast-Scan Pills -->
+  <g transform="translate(30, 206)">
+    <rect x="0" y="0" width="102" height="25" rx="6" fill="#0f1a38" stroke="#1e293b" />
+    <circle cx="10" cy="12.5" r="3" fill="#00f0ff" />
+    <text x="18" y="16.5" font-family="ui-monospace, monospace" font-size="10.5" fill="#f8fafc" font-weight="600">C++ / CUDA</text>
 
-    <rect x="106" y="0" width="112" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
-    <circle cx="116" cy="12" r="3" fill="#a855f7" />
-    <text x="124" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#e2e8f0">FastAPI / RAG</text>
+    <rect x="110" y="0" width="112" height="25" rx="6" fill="#0f1a38" stroke="#1e293b" />
+    <circle cx="120" cy="12.5" r="3" fill="#a855f7" />
+    <text x="128" y="16.5" font-family="ui-monospace, monospace" font-size="10.5" fill="#f8fafc" font-weight="600">Agentic RAG</text>
 
-    <rect x="226" y="0" width="102" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
-    <circle cx="236" cy="12" r="3" fill="#10b981" />
-    <text x="244" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#e2e8f0">PostGIS 3.6</text>
+    <rect x="230" y="0" width="106" height="25" rx="6" fill="#0f1a38" stroke="#1e293b" />
+    <circle cx="240" cy="12.5" r="3" fill="#00ff9d" />
+    <text x="248" y="16.5" font-family="ui-monospace, monospace" font-size="10.5" fill="#f8fafc" font-weight="600">PostGIS 3.6</text>
 
-    <rect x="336" y="0" width="112" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
-    <circle cx="346" cy="12" r="3" fill="#f59e0b" />
-    <text x="354" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#e2e8f0">Next.js 16 RLS</text>
+    <rect x="344" y="0" width="114" height="25" rx="6" fill="#0f1a38" stroke="#1e293b" />
+    <circle cx="354" cy="12.5" r="3" fill="#f59e0b" />
+    <text x="362" y="16.5" font-family="ui-monospace, monospace" font-size="10.5" fill="#f8fafc" font-weight="600">Next.js 16 RLS</text>
   </g>
 
-  <!-- RIGHT TELEMETRY & HARDWARE CARD -->
-  <g transform="translate(530, 50)">
-    <rect x="0" y="0" width="340" height="178" rx="10" fill="url(#card-glass)" stroke="#1e293b" stroke-width="1" />
+  <!-- RIGHT COLUMN: RECRUITER HUD & PRODUCTION PROOF -->
+  <g transform="translate(525, 50)">
+    <rect x="0" y="0" width="345" height="186" rx="10" fill="url(#hud-glass)" stroke="#1e293b" stroke-width="1.2" />
 
-    <!-- Card Top Header -->
-    <path d="M 0 10 C 0 4.47 4.47 0 10 0 L 330 0 C 335.53 0 340 4.47 340 10 L 340 26 L 0 26 Z" fill="#070c18" />
-    <line x1="0" y1="26" x2="340" y2="26" stroke="#1e293b" />
-    <circle cx="12" cy="13" r="3" fill="#334155" />
-    <circle cx="22" cy="13" r="3" fill="#334155" />
-    <text x="34" y="17" font-family="ui-monospace, monospace" font-size="9.5" fill="#64748b">ENGINEERING_METRICS.sys</text>
-    <text x="328" y="17" font-family="ui-monospace, monospace" font-size="9" fill="#10b981" text-anchor="end">● VERIFIED</text>
+    <!-- HUD Header -->
+    <path d="M 0 10 C 0 4.47 4.47 0 10 0 L 335 0 C 340.53 0 345 4.47 345 10 L 345 27 L 0 27 Z" fill="#070e24" />
+    <line x1="0" y1="27" x2="345" y2="27" stroke="#1e293b" />
+    <circle cx="12" cy="13.5" r="3" fill="#334155" />
+    <circle cx="22" cy="13.5" r="3" fill="#334155" />
+    <text x="34" y="17.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#94a3b8" font-weight="600">PRODUCTION_PROOF_MANIFEST</text>
+    <text x="333" y="17.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#00ff9d" text-anchor="end" font-weight="700">● SHIPPED</text>
 
-    <!-- Metric 1: CivicLens Spatial Dedup -->
-    <g transform="translate(16, 42)">
-      <text y="0" font-family="ui-monospace, monospace" font-size="10" fill="#94a3b8">CivicLens Spatial Dedup</text>
-      <text x="308" y="0" font-family="ui-monospace, monospace" font-size="10" fill="#38bdf8" text-anchor="end" font-weight="600">40.4% ST_DWithin</text>
-      <rect x="0" y="6" width="308" height="4" rx="2" fill="#1e293b" />
-      <rect x="0" y="6" width="250" height="4" rx="2" fill="url(#bar-blue)" class="glow-metric" />
+    <!-- Metric 1: CivicLens Spatial Noise Reduction -->
+    <g transform="translate(16, 43)">
+      <text y="0" font-family="ui-monospace, monospace" font-size="10" fill="#94a3b8">CivicLens 311 Deduplication</text>
+      <text x="313" y="0" font-family="ui-monospace, monospace" font-size="10" fill="#00f0ff" text-anchor="end" font-weight="700">40.4% ST_DWithin</text>
+      <rect x="0" y="6" width="313" height="4.5" rx="2" fill="#1e293b" />
+      <rect x="0" y="6" width="250" height="4.5" rx="2" fill="url(#h-bar-blue)" />
     </g>
 
-    <!-- Metric 2: CampusOS Security Isolation -->
-    <g transform="translate(16, 74)">
-      <text y="0" font-family="ui-monospace, monospace" font-size="10" fill="#94a3b8">CampusOS PostgreSQL RLS</text>
-      <text x="308" y="0" font-family="ui-monospace, monospace" font-size="10" fill="#34d399" text-anchor="end" font-weight="600">15 RLS Tables</text>
-      <rect x="0" y="6" width="308" height="4" rx="2" fill="#1e293b" />
-      <rect x="0" y="6" width="280" height="4" rx="2" fill="url(#bar-green)" />
+    <!-- Metric 2: CampusOS Security -->
+    <g transform="translate(16, 76)">
+      <text y="0" font-family="ui-monospace, monospace" font-size="10" fill="#94a3b8">CampusOS Security Isolation</text>
+      <text x="313" y="0" font-family="ui-monospace, monospace" font-size="10" fill="#00ff9d" text-anchor="end" font-weight="700">15 RLS Tables</text>
+      <rect x="0" y="6" width="313" height="4.5" rx="2" fill="#1e293b" />
+      <rect x="0" y="6" width="280" height="4.5" rx="2" fill="url(#h-bar-green)" />
     </g>
 
-    <!-- Metric 3: Agentic RAG Verification -->
-    <g transform="translate(16, 106)">
-      <text y="0" font-family="ui-monospace, monospace" font-size="10" fill="#94a3b8">Agentic RAG Test Suite</text>
-      <text x="308" y="0" font-family="ui-monospace, monospace" font-size="10" fill="#c084fc" text-anchor="end" font-weight="600">8/8 Passed</text>
-      <rect x="0" y="6" width="308" height="4" rx="2" fill="#1e293b" />
-      <rect x="0" y="6" width="290" height="4" rx="2" fill="url(#bar-purple)" />
+    <!-- Metric 3: Automated Test Suite -->
+    <g transform="translate(16, 109)">
+      <text y="0" font-family="ui-monospace, monospace" font-size="10" fill="#94a3b8">Agentic RAG Test Verification</text>
+      <text x="313" y="0" font-family="ui-monospace, monospace" font-size="10" fill="#c084fc" text-anchor="end" font-weight="700">8/8 Test Suite Passed</text>
+      <rect x="0" y="6" width="313" height="4.5" rx="2" fill="#1e293b" />
+      <rect x="0" y="6" width="295" height="4.5" rx="2" fill="url(#h-bar-purple)" />
     </g>
 
-    <!-- Status Footer -->
-    <g transform="translate(16, 142)">
-      <text y="0" font-family="ui-monospace, monospace" font-size="9.5" fill="#64748b">
-        Core: <tspan fill="#e2e8f0">C++</tspan> · <tspan fill="#e2e8f0">Python</tspan> · <tspan fill="#e2e8f0">PostGIS</tspan> · <tspan fill="#e2e8f0">Next.js</tspan>
+    <!-- Recruiter Action Row -->
+    <g transform="translate(16, 148)">
+      <line x1="0" y1="-8" x2="313" y2="-8" stroke="#1e293b" />
+      <text y="4" font-family="ui-monospace, monospace" font-size="9.5" fill="#64748b">
+        Core: <tspan fill="#f8fafc" font-weight="600">Python · C++ · TypeScript · SQL</tspan>
       </text>
-      <text x="308" y="0" font-family="ui-monospace, monospace" font-size="9.5" fill="#38bdf8" text-anchor="end">
-        Open for Ventures ↗
+      <text x="313" y="4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#00f0ff" text-anchor="end">
+        Hire / Collaborate ↗
       </text>
     </g>
   </g>

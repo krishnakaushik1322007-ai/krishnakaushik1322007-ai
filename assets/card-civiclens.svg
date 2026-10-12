@@ -1,66 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 185" width="435" height="185" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 195" width="435" height="195" fill="none">
   <defs>
-    <linearGradient id="card-civic-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080e1a" />
-      <stop offset="100%" stop-color="#040710" />
+    <style>
+      @keyframes radar-ping {
+        0% { r: 4.5; opacity: 1; }
+        70% { r: 10; opacity: 0; stroke-width: 0.5; }
+        100% { r: 10; opacity: 0; }
+      }
+      @keyframes civic-border-glow {
+        0%, 100% { stroke: #00f0ff; stroke-opacity: 0.8; }
+        50% { stroke: #0284c7; stroke-opacity: 0.4; }
+      }
+      .r-ping { animation: radar-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite; }
+      .c-border { animation: civic-border-glow 4s ease-in-out infinite; }
+    </style>
+
+    <linearGradient id="c-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081024" />
+      <stop offset="100%" stop-color="#040814" />
     </linearGradient>
-    <linearGradient id="border-civic" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
-      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.4" />
-    </linearGradient>
-    <radialGradient id="glow-civic" cx="10%" cy="15%" r="50%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    <radialGradient id="c-glow" cx="12%" cy="15%" r="50%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0" />
     </radialGradient>
   </defs>
 
-  <!-- Card Body -->
-  <rect x="0.5" y="0.5" width="434" height="184" rx="10" fill="url(#card-civic-bg)" stroke="url(#border-civic)" stroke-width="1.2" />
-  <rect x="1" y="1" width="433" height="183" rx="10" fill="url(#glow-civic)" />
+  <!-- Card Body with Animated Glowing Border -->
+  <rect x="0.5" y="0.5" width="434" height="194" rx="10" fill="url(#c-bg)" stroke="#00f0ff" stroke-width="1.2" class="c-border" />
+  <rect x="1" y="1" width="433" height="193" rx="10" fill="url(#c-glow)" />
 
   <!-- Top Status Row -->
-  <g transform="translate(18, 20)">
-    <!-- Radar Icon -->
-    <circle cx="10" cy="10" r="9" fill="#0f1f38" stroke="#0284c7" />
-    <circle cx="10" cy="10" r="4.5" fill="#38bdf8" />
-    <path d="M 10 10 L 17 5" stroke="#38bdf8" stroke-width="1.2" />
+  <g transform="translate(18, 18)">
+    <circle cx="10" cy="10" r="9" fill="#0c2347" stroke="#0284c7" />
+    <circle cx="10" cy="10" r="4.5" fill="#00f0ff" />
+    <circle cx="10" cy="10" r="4.5" stroke="#00f0ff" fill="none" class="r-ping" />
     
-    <text x="26" y="14" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="9.5" fill="#38bdf8" font-weight="600" letter-spacing="0.5">
-      SPATIAL AI // 311 TRIAGE
+    <text x="26" y="14" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="9.5" fill="#00f0ff" font-weight="700" letter-spacing="0.5">
+      MUNICIPAL SPATIAL AI // 311 TRIAGE
     </text>
 
     <!-- Dedup Metric Badge -->
-    <rect x="290" y="0" width="108" height="20" rx="10" fill="#052e16" stroke="#10b981" />
-    <text x="344" y="13.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#34d399" font-weight="700" text-anchor="middle">
-      40.4% DEDUP
+    <rect x="286" y="0" width="112" height="20" rx="10" fill="#052e16" stroke="#00ff9d" />
+    <text x="342" y="13.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#00ff9d" font-weight="800" text-anchor="middle">
+      40.4% NOISE DEDUP
     </text>
   </g>
 
-  <!-- Title -->
-  <text x="18" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" fill="#f8fafc">
+  <!-- Title & Company Value Subtitle -->
+  <text x="18" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#f8fafc">
     CivicLens
   </text>
-  <text x="18" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="500" fill="#94a3b8">
-    Municipal Spatial Intelligence &amp; Automated 311 Triage
+  <text x="18" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600" fill="#94a3b8">
+    Autonomous Municipal Issue Triage &amp; Geospatial Intelligence
   </text>
 
-  <!-- Description -->
-  <text x="18" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
-    Consolidates duplicate citizen reports using sub-meter <tspan fill="#38bdf8" font-family="ui-monospace, monospace">ST_DWithin</tspan>
-  </text>
-  <text x="18" y="124" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
-    geospatial clustering, paired with Gemini 2.5 Flash vision verification.
-  </text>
+  <!-- Clear Bullets for Companies -->
+  <g transform="translate(18, 102)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
+    <text y="0">✦ <tspan fill="#f8fafc" font-weight="600">The Problem:</tspan> 311 citizen report overload from duplicate submissions.</text>
+    <text y="18">✦ <tspan fill="#f8fafc" font-weight="600">The Innovation:</tspan> Sub-meter <tspan fill="#00f0ff" font-family="ui-monospace, monospace">ST_DWithin</tspan> spatial math + Gemini vision triage.</text>
+    <text y="36">✦ <tspan fill="#f8fafc" font-weight="600">The Outcome:</tspan> <tspan fill="#00ff9d" font-weight="700">40.4% noise reduction</tspan> &amp; automated 6-factor priority scoring.</text>
+  </g>
 
   <!-- Bottom Bar: Tech & Action Link -->
-  <line x1="18" y1="144" x2="416" y2="144" stroke="#1e293b" />
-  <g transform="translate(18, 163)">
+  <line x1="18" y1="152" x2="416" y2="152" stroke="#1e293b" />
+  <g transform="translate(18, 172)">
     <text font-family="ui-monospace, monospace" font-size="10" fill="#64748b">
-      <tspan fill="#38bdf8">PostGIS 3.6</tspan> · FastAPI · Next.js 16 · Gemini
+      <tspan fill="#00f0ff" font-weight="600">PostGIS 3.6</tspan> · FastAPI · Next.js 16 · Gemini
     </text>
-    <text x="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">
-      Inspect Architecture ↗
+    <text x="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#00f0ff" text-anchor="end">
+      Inspect Architecture &amp; Code ↗
     </text>
   </g>
 </svg>

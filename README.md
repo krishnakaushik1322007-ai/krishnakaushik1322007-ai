@@ -2,10 +2,9 @@
   <img src="./assets/hero.svg" alt="Krishna Kaushik — AI Systems Architecture" width="100%">
 </p>
 
+<!-- 30-Second Recruiter Fast-Scan Summary -->
 <p align="center">
-  <code>📍 Himachal Pradesh, India</code> &nbsp;•&nbsp;
-  <code>🎓 B.Tech CSE (Artificial Intelligence) — Shoolini University</code> &nbsp;•&nbsp;
-  <code>⚡ High-Throughput Serving &amp; Spatial Intelligence</code>
+  <img src="./assets/executive-summary.svg" alt="Executive Candidate Summary for Hiring Managers" width="100%">
 </p>
 
 ---
@@ -34,7 +33,7 @@
 
 ---
 
-### 🧬 Technical Stack // Grounded in Shipped Projects
+### 🧬 Technical Stack // Grounded in Shipped Code
 
 <p align="center">
   <img src="./assets/tech-stack.svg" alt="Technical Surface &amp; Specialized Infrastructure" width="100%">
@@ -55,8 +54,6 @@
   <img src="./assets/learning-radar.svg" alt="Frontier Learning Radar for AI Engineers" width="100%">
 </p>
 
-For engineers looking to transition from basic API orchestration to true **Frontier AI Systems Engineering**, the current technological paradigm demands mastering three critical layers:
-
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │                        AI SYSTEMS FRONTIER LEARNING VECTOR                             │
@@ -69,7 +66,7 @@ For engineers looking to transition from basic API orchestration to true **Front
 └────────────────────────────┴─────────────────────────────┴─────────────────────────────┘
 ```
 
-1. **GPU Kernel Engineering with Triton & CUDA C++**: Moving past high-level PyTorch abstractions to write custom fused attention and layer norm kernels in Triton, optimizing on-chip SRAM memory reuse to eliminate global memory roundtrips.
+1. **GPU Kernel Engineering with Triton & CUDA C++**: Writing custom fused attention and layer norm kernels in Triton, optimizing on-chip SRAM memory reuse to eliminate global memory roundtrips.
 2. **High-Throughput Inference Engines (vLLM & TensorRT-LLM)**: Understanding PagedAttention KV-cache fragmentation mechanics, continuous dynamic batching, chunked prefill, and dynamic draft-target speculative decoding for sub-10ms TTFT.
 3. **Reasoning Models & Post-Training (RLVR & GRPO)**: Implementing Reinforcement Learning with Verifiable Rewards (RLVR) and Group Relative Policy Optimization (GRPO) to train reasoning behavior on code and math without relying on massive critic models.
 
@@ -125,14 +122,16 @@ $ ./krishna-benchmarks --status --active
 
 ---
 
+### 🤝 Connect &amp; Hiring Gateway
+
 <p align="center">
-  <a href="mailto:krishnakaushik1322007@gmail.com"><img src="https://img.shields.io/badge/Email-krishnakaushik1322007%40gmail.com-0f172a?style=flat-square&logo=gmail&logoColor=38bdf8" alt="Email" /></a>
+  <a href="mailto:krishnakaushik1322007@gmail.com"><img src="https://img.shields.io/badge/Email-krishnakaushik1322007%40gmail.com-0f172a?style=flat-square&logo=gmail&logoColor=00f0ff" alt="Email" /></a>
   &nbsp;
-  <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LinkedIn-Connect-0f172a?style=flat-square&logo=linkedin&logoColor=38bdf8" alt="LinkedIn" /></a>
+  <a href="https://linkedin.com"><img src="https://img.shields.io/badge/LinkedIn-Connect-0f172a?style=flat-square&logo=linkedin&logoColor=00f0ff" alt="LinkedIn" /></a>
   &nbsp;
-  <a href="https://twitter.com"><img src="https://img.shields.io/badge/X%20(Twitter)-Connect-0f172a?style=flat-square&logo=x&logoColor=38bdf8" alt="Twitter" /></a>
+  <a href="https://twitter.com"><img src="https://img.shields.io/badge/X%20(Twitter)-Connect-0f172a?style=flat-square&logo=x&logoColor=00f0ff" alt="Twitter" /></a>
   &nbsp;
-  <a href="https://huggingface.co/krishnakaushik1322007-ai"><img src="https://img.shields.io/badge/Hugging%20Face-Models-0f172a?style=flat-square&logo=huggingface&logoColor=38bdf8" alt="Hugging Face" /></a>
+  <a href="https://huggingface.co/krishnakaushik1322007-ai"><img src="https://img.shields.io/badge/Hugging%20Face-Models-0f172a?style=flat-square&logo=huggingface&logoColor=00f0ff" alt="Hugging Face" /></a>
   &nbsp;
-  <a href="https://github.com/krishnakaushik1322007-ai"><img src="https://img.shields.io/badge/GitHub-Profile-0f172a?style=flat-square&logo=github&logoColor=38bdf8" alt="GitHub" /></a>
+  <a href="https://github.com/krishnakaushik1322007-ai"><img src="https://img.shields.io/badge/GitHub-Profile-0f172a?style=flat-square&logo=github&logoColor=00f0ff" alt="GitHub" /></a>
 </p>

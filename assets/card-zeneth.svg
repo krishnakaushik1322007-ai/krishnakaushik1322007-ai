@@ -1,66 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 185" width="435" height="185" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 195" width="435" height="195" fill="none">
   <defs>
-    <linearGradient id="card-zeneth-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08140f" />
-      <stop offset="100%" stop-color="#030906" />
+    <style>
+      @keyframes leaf-pulse {
+        0%, 100% { stroke: #10b981; filter: drop-shadow(0 0 2px #10b981); }
+        50% { stroke: #34d399; filter: drop-shadow(0 0 6px #34d399); }
+      }
+      @keyframes zen-border-glow {
+        0%, 100% { stroke: #10b981; stroke-opacity: 0.8; }
+        50% { stroke: #047857; stroke-opacity: 0.4; }
+      }
+      .l-pulse { animation: leaf-pulse 2.2s ease-in-out infinite; }
+      .z-border { animation: zen-border-glow 4s ease-in-out infinite; }
+    </style>
+
+    <linearGradient id="z-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05140d" />
+      <stop offset="100%" stop-color="#020805" />
     </linearGradient>
-    <linearGradient id="border-zeneth" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10b981" stop-opacity="0.8" />
-      <stop offset="60%" stop-color="#047857" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.4" />
-    </linearGradient>
-    <radialGradient id="glow-zeneth" cx="10%" cy="15%" r="50%">
-      <stop offset="0%" stop-color="#10b981" stop-opacity="0.12" />
+    <radialGradient id="z-glow" cx="12%" cy="15%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.14" />
       <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
     </radialGradient>
   </defs>
 
-  <!-- Card Body -->
-  <rect x="0.5" y="0.5" width="434" height="184" rx="10" fill="url(#card-zeneth-bg)" stroke="url(#border-zeneth)" stroke-width="1.2" />
-  <rect x="1" y="1" width="433" height="183" rx="10" fill="url(#glow-zeneth)" />
+  <rect x="0.5" y="0.5" width="434" height="194" rx="10" fill="url(#z-bg)" stroke="#10b981" stroke-width="1.2" class="z-border" />
+  <rect x="1" y="1" width="433" height="193" rx="10" fill="url(#z-glow)" />
 
   <!-- Top Status Row -->
-  <g transform="translate(18, 20)">
-    <!-- Tree / Leaf Node Icon -->
-    <circle cx="10" cy="10" r="9" fill="#064e3b" stroke="#10b981" />
-    <path d="M 6 12 Q 10 5 14 12" stroke="#34d399" stroke-width="1.2" fill="none" />
-    <line x1="10" y1="8" x2="10" y2="15" stroke="#34d399" stroke-width="1.2" />
+  <g transform="translate(18, 18)">
+    <circle cx="10" cy="10" r="9" fill="#043825" stroke="#10b981" />
+    <path d="M 6 12 Q 10 5 14 12" stroke="#34d399" stroke-width="1.3" fill="none" class="l-pulse" />
+    <line x1="10" y1="8" x2="10" y2="15" stroke="#34d399" stroke-width="1.3" />
 
-    <text x="26" y="14" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="9.5" fill="#34d399" font-weight="600" letter-spacing="0.5">
-      EXPERT SYSTEMS // C++ AI
+    <text x="26" y="14" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="9.5" fill="#34d399" font-weight="700" letter-spacing="0.5">
+      CORE SYSTEMS // C++ EXPERT SYSTEM
     </text>
 
     <!-- Deterministic Badge -->
-    <rect x="290" y="0" width="108" height="20" rx="10" fill="#022c22" stroke="#059669" />
-    <text x="344" y="13.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#6ee7b7" font-weight="700" text-anchor="middle">
-      ZERO RUNTIME DEPS
+    <rect x="286" y="0" width="112" height="20" rx="10" fill="#022c22" stroke="#00ff9d" />
+    <text x="342" y="13.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#00ff9d" font-weight="800" text-anchor="middle">
+      ZERO EXTERNAL DEPS
     </text>
   </g>
 
-  <!-- Title -->
-  <text x="18" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" fill="#f8fafc">
+  <!-- Title & Subtitle -->
+  <text x="18" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#f8fafc">
     ZENETH Diagnostic Engine
   </text>
-  <text x="18" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="500" fill="#94a3b8">
-    Deterministic Crop Pathology Expert System
+  <text x="18" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600" fill="#94a3b8">
+    Deterministic Rule-Based Crop Pathology Diagnostic System
   </text>
 
-  <!-- Description -->
-  <text x="18" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
-    Algorithmic diagnostic engine for 9+ agricultural crops. Implements symptom
-  </text>
-  <text x="18" y="124" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">
-    decision trees and keyword resolution with zero external dependencies.
-  </text>
+  <!-- Bullets for Companies -->
+  <g transform="translate(18, 102)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
+    <text y="0">✦ <tspan fill="#f8fafc" font-weight="600">The Problem:</tspan> Multi-crop pathology diagnosis in offline/edge settings.</text>
+    <text y="18">✦ <tspan fill="#f8fafc" font-weight="600">The Innovation:</tspan> Algorithmic decision trees &amp; symptom keyword matching in pure C++.</text>
+    <text y="36">✦ <tspan fill="#f8fafc" font-weight="600">The Outcome:</tspan> <tspan fill="#00ff9d" font-weight="700">Sub-microsecond deterministic diagnosis</tspan> across 9+ crops with treatment plans.</text>
+  </g>
 
   <!-- Bottom Bar: Tech & Action Link -->
-  <line x1="18" y1="144" x2="416" y2="144" stroke="#1e293b" />
-  <g transform="translate(18, 163)">
+  <line x1="18" y1="152" x2="416" y2="152" stroke="#1e293b" />
+  <g transform="translate(18, 172)">
     <text font-family="ui-monospace, monospace" font-size="10" fill="#64748b">
-      <tspan fill="#34d399">C++</tspan> · STL · Knowledge Graph · OOP
+      <tspan fill="#34d399" font-weight="600">C++ (C++20)</tspan> · STL · Decision Trees · OOP
     </text>
-    <text x="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#34d399" text-anchor="end">
-      Inspect C++ Engine ↗
+    <text x="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#34d399" text-anchor="end">
+      Inspect Architecture &amp; Code ↗
     </text>
   </g>
 </svg>
