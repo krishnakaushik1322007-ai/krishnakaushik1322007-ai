@@ -88,14 +88,39 @@ $ ./krishna-benchmarks --status --active
 
 ---
 
-### ⚡ Contribution Activity
+### ⚡ Live Contribution Telemetry &amp; Activity Stream
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/output/github-contribution-grid-snake.svg">
-    <img alt="Contribution Snake" src="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/output/github-contribution-grid-snake-dark.svg" width="100%">
-  </picture>
+  <img src="./assets/activity-header.svg" alt="GitHub Activity Telemetry Header" width="100%">
+</p>
+
+<!-- Interactive Clickable Snake Canvas -->
+<p align="center">
+  <a href="https://github.com/krishnakaushik1322007-ai?tab=overview" title="Click to view live contribution graph on GitHub">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/output/github-contribution-grid-snake-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/output/github-contribution-grid-snake.svg">
+      <img alt="Contribution Grid Snake" src="https://raw.githubusercontent.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/output/github-contribution-grid-snake-dark.svg" width="100%">
+    </picture>
+  </a>
+</p>
+
+<!-- Interactive Quick Links & Telemetry Navigation -->
+<p align="center">
+  <a href="https://github.com/krishnakaushik1322007-ai?tab=overview"><code>● Live Contribution Grid ↗</code></a> &nbsp;•&nbsp;
+  <a href="https://github.com/krishnakaushik1322007-ai?tab=repositories"><code>📦 8 Shipped Repositories ↗</code></a> &nbsp;•&nbsp;
+  <a href="https://github.com/krishnakaushik1322007-ai/krishnakaushik1322007-ai/blob/main/.github/workflows/snake.yml"><code>⚙️ Snake CI/CD Workflow ↗</code></a>
+</p>
+
+<!-- Side-by-Side Live Theme-Matched Interactive Activity Cards -->
+<p align="center">
+  <a href="https://github.com/krishnakaushik1322007-ai" title="Inspect Commit Velocity & Streak">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=krishnakaushik1322007-ai&theme=transparent&hide_border=false&border=1e293b&background=080e1a&ring=38bdf8&fire=38bdf8&currStreakLabel=38bdf8&sideNums=f8fafc&sideLabels=94a3b8&dates=64748b" height="165" alt="GitHub Streak" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/krishnakaushik1322007-ai?tab=repositories" title="Inspect Language Breakdown">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishnakaushik1322007-ai&layout=compact&hide_border=false&border_color=1e293b&bg_color=080e1a&title_color=38bdf8&text_color=cbd5e1" height="165" alt="Top Languages" />
+  </a>
 </p>
 
 ---

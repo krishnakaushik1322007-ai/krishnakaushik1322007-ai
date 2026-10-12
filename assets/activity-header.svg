@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 74" width="900" height="74" fill="none">
+  <defs>
+    <style>
+      @keyframes pulse-ring {
+        0% { r: 3.5; opacity: 0.9; stroke-width: 1.5; }
+        60% { r: 8.5; opacity: 0; stroke-width: 0.5; }
+        100% { r: 8.5; opacity: 0; stroke-width: 0; }
+      }
+      @keyframes border-glow {
+        0%, 100% { stroke-opacity: 0.4; }
+        50% { stroke-opacity: 0.85; }
+      }
+      .ring-anim {
+        animation: pulse-ring 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+      .frame-glow {
+        animation: border-glow 4s ease-in-out infinite;
+      }
+    </style>
+
+    <linearGradient id="act-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040713" />
+      <stop offset="50%" stop-color="#080e22" />
+      <stop offset="100%" stop-color="#050816" />
+    </linearGradient>
+
+    <linearGradient id="act-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="0.5" y="0.5" width="899" height="73" rx="10" fill="url(#act-bg)" stroke="url(#act-border)" stroke-width="1.2" class="frame-glow" />
+
+  <!-- Top bar -->
+  <path d="M 0 10 C 0 4.47 4.47 0 10 0 L 890 0 C 895.53 0 900 4.47 900 10 L 900 28 L 0 28 Z" fill="#090f1f" />
+  <line x1="0" y1="28" x2="900" y2="28" stroke="#1e293b" />
+
+  <!-- Window controls -->
+  <circle cx="18" cy="14" r="4" fill="#ef4444" opacity="0.85" />
+  <circle cx="32" cy="14" r="4" fill="#f59e0b" opacity="0.85" />
+  <circle cx="46" cy="14" r="4" fill="#10b981" opacity="0.85" />
+
+  <!-- Title -->
+  <text x="64" y="18" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="10.5" fill="#64748b" letter-spacing="0.5">
+    github-actions // contribution-grid-snake.yml [branch: output]
+  </text>
+  <text x="882" y="18" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="10" fill="#38bdf8" text-anchor="end" letter-spacing="0.5">
+    ⚡ 24H SYNAPSE CRON
+  </text>
+
+  <!-- Lower telemetry line -->
+  <g transform="translate(18, 48)">
+    <circle cx="6" cy="6" r="3.5" fill="#10b981" />
+    <circle cx="6" cy="6" r="3.5" stroke="#10b981" fill="none" class="ring-anim" />
+    <text x="18" y="9.5" font-family="ui-monospace, monospace" font-size="10.5" fill="#f8fafc" font-weight="600">
+      LIVE COMMIT TELEMETRY
+    </text>
+    <text x="180" y="9.5" font-family="ui-monospace, monospace" font-size="10" fill="#94a3b8">
+      · Automated Nightly CI/CD Cycle · Continuous Code Ship Velocity
+    </text>
+
+    <!-- Right badge -->
+    <text x="864" y="9.5" font-family="ui-monospace, monospace" font-size="10" fill="#34d399" text-anchor="end" font-weight="600">
+      ● 8 ACTIVE REPOSITORIES
+    </text>
+  </g>
+</svg>
