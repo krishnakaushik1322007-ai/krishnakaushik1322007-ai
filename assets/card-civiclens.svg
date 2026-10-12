@@ -1,73 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 195" width="435" height="195" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 200" width="435" height="200" fill="none">
   <defs>
     <style>
-      @keyframes radar-ping {
-        0% { r: 4.5; opacity: 1; }
-        70% { r: 10; opacity: 0; stroke-width: 0.5; }
-        100% { r: 10; opacity: 0; }
+      @keyframes ping-civic {
+        0% { r: 4; opacity: 1; stroke-width: 1.5; }
+        70% { r: 12; opacity: 0; stroke-width: 0.5; }
+        100% { r: 12; opacity: 0; }
       }
-      @keyframes civic-border-glow {
-        0%, 100% { stroke: #00f0ff; stroke-opacity: 0.8; }
-        50% { stroke: #0284c7; stroke-opacity: 0.4; }
+      @keyframes border-civic {
+        0%, 100% { stroke: #34d399; filter: drop-shadow(0 0 4px rgba(52, 211, 153, 0.4)); }
+        50% { stroke: #38bdf8; filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.4)); }
       }
-      .r-ping { animation: radar-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite; }
-      .c-border { animation: civic-border-glow 4s ease-in-out infinite; }
+      .c-ping { animation: ping-civic 2.2s cubic-bezier(0, 0, 0.2, 1) infinite; }
+      .c-border { animation: border-civic 5s ease-in-out infinite; }
     </style>
 
-    <linearGradient id="c-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#081024" />
-      <stop offset="100%" stop-color="#040814" />
+    <linearGradient id="card-civic-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04121a" />
+      <stop offset="60%" stop-color="#061824" />
+      <stop offset="100%" stop-color="#02080e" />
     </linearGradient>
-    <radialGradient id="c-glow" cx="12%" cy="15%" r="50%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.14" />
-      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0" />
-    </radialGradient>
   </defs>
 
-  <!-- Card Body with Animated Glowing Border -->
-  <rect x="0.5" y="0.5" width="434" height="194" rx="10" fill="url(#c-bg)" stroke="#00f0ff" stroke-width="1.2" class="c-border" />
-  <rect x="1" y="1" width="433" height="193" rx="10" fill="url(#c-glow)" />
+  <!-- Outer Card Frame with Animated Glow -->
+  <rect x="0.5" y="0.5" width="434" height="199" rx="10" fill="url(#card-civic-bg)" stroke="#34d399" stroke-width="1.3" class="c-border" />
 
-  <!-- Top Status Row -->
-  <g transform="translate(18, 18)">
-    <circle cx="10" cy="10" r="9" fill="#0c2347" stroke="#0284c7" />
-    <circle cx="10" cy="10" r="4.5" fill="#00f0ff" />
-    <circle cx="10" cy="10" r="4.5" stroke="#00f0ff" fill="none" class="r-ping" />
-    
-    <text x="26" y="14" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="9.5" fill="#00f0ff" font-weight="700" letter-spacing="0.5">
-      MUNICIPAL SPATIAL AI // 311 TRIAGE
+  <!-- Top Header Row -->
+  <g transform="translate(16, 16)">
+    <circle cx="10" cy="10" r="4" fill="#34d399" />
+    <circle cx="10" cy="10" r="4" stroke="#34d399" fill="none" class="c-ping" />
+    <text x="24" y="14" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="10" fill="#34d399" font-weight="700" letter-spacing="0.6">
+      SPATIAL AI // MUNICIPAL 311 TRIAGE
     </text>
 
-    <!-- Dedup Metric Badge -->
-    <rect x="286" y="0" width="112" height="20" rx="10" fill="#052e16" stroke="#00ff9d" />
-    <text x="342" y="13.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#00ff9d" font-weight="800" text-anchor="middle">
-      40.4% NOISE DEDUP
+    <!-- Measured Impact Pill -->
+    <rect x="282" y="0" width="122" height="22" rx="11" fill="#042e1d" stroke="#34d399" />
+    <text x="343" y="15" font-family="ui-monospace, monospace" font-size="10" fill="#34d399" font-weight="800" text-anchor="middle">
+      40.4% DEDUPED
     </text>
   </g>
 
-  <!-- Title & Company Value Subtitle -->
-  <text x="18" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#f8fafc">
+  <!-- Project Title & Subtitle -->
+  <text x="16" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="800" fill="#ffffff">
     CivicLens
   </text>
-  <text x="18" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600" fill="#94a3b8">
+  <text x="16" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#94a3b8">
     Autonomous Municipal Issue Triage &amp; Geospatial Intelligence
   </text>
 
-  <!-- Clear Bullets for Companies -->
-  <g transform="translate(18, 102)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
-    <text y="0">✦ <tspan fill="#f8fafc" font-weight="600">The Problem:</tspan> 311 citizen report overload from duplicate submissions.</text>
-    <text y="18">✦ <tspan fill="#f8fafc" font-weight="600">The Innovation:</tspan> Sub-meter <tspan fill="#00f0ff" font-family="ui-monospace, monospace">ST_DWithin</tspan> spatial math + Gemini vision triage.</text>
-    <text y="36">✦ <tspan fill="#f8fafc" font-weight="600">The Outcome:</tspan> <tspan fill="#00ff9d" font-weight="700">40.4% noise reduction</tspan> &amp; automated 6-factor priority scoring.</text>
+  <!-- 3 High-Impact Value Bullets -->
+  <g transform="translate(16, 108)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#cbd5e1">
+    <text y="0">✦ <tspan fill="#ffffff" font-weight="600">Problem:</tspan> Duplicate 311 citizen report overload.</text>
+    <text y="19">✦ <tspan fill="#ffffff" font-weight="600">Architecture:</tspan> Sub-meter PostGIS <tspan fill="#38bdf8" font-family="ui-monospace, monospace">ST_DWithin</tspan> + Gemini Vision.</text>
+    <text y="38">✦ <tspan fill="#ffffff" font-weight="600">Impact:</tspan> <tspan fill="#34d399" font-weight="700">40.4% noise reduction</tspan> &amp; 6-factor automated priority scoring.</text>
   </g>
 
-  <!-- Bottom Bar: Tech & Action Link -->
-  <line x1="18" y1="152" x2="416" y2="152" stroke="#1e293b" />
-  <g transform="translate(18, 172)">
-    <text font-family="ui-monospace, monospace" font-size="10" fill="#64748b">
-      <tspan fill="#00f0ff" font-weight="600">PostGIS 3.6</tspan> · FastAPI · Next.js 16 · Gemini
-    </text>
-    <text x="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#00f0ff" text-anchor="end">
-      Inspect Architecture &amp; Code ↗
+  <!-- Bottom Technology Tags -->
+  <g transform="translate(16, 170)">
+    <rect x="0" y="0" width="75" height="18" rx="4" fill="#0b242e" stroke="#164e63" />
+    <text x="37" y="12.5" font-family="ui-monospace, monospace" font-size="9" fill="#38bdf8" text-anchor="middle">PostGIS 3.6</text>
+
+    <rect x="82" y="0" width="85" height="18" rx="4" fill="#0b242e" stroke="#164e63" />
+    <text x="124" y="12.5" font-family="ui-monospace, monospace" font-size="9" fill="#34d399" text-anchor="middle">Gemini Vision</text>
+
+    <rect x="174" y="0" width="70" height="18" rx="4" fill="#0b242e" stroke="#164e63" />
+    <text x="209" y="12.5" font-family="ui-monospace, monospace" font-size="9" fill="#e2e8f0" text-anchor="middle">Next.js 16</text>
+
+    <rect x="251" y="0" width="65" height="18" rx="4" fill="#0b242e" stroke="#164e63" />
+    <text x="283" y="12.5" font-family="ui-monospace, monospace" font-size="9" fill="#e2e8f0" text-anchor="middle">FastAPI</text>
+
+    <text x="398" y="13" font-family="ui-monospace, monospace" font-size="10" fill="#34d399" text-anchor="end" font-weight="700">
+      VIEW REPO ↗
     </text>
   </g>
 </svg>

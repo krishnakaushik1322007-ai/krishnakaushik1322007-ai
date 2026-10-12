@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="900" height="240" fill="none">
+  <defs>
+    <style>
+      @keyframes wire-pulse {
+        0% { stroke-dashoffset: 60; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes packet-move-1 {
+        0% { transform: translateX(0px); opacity: 0; }
+        15% { opacity: 1; }
+        85% { opacity: 1; }
+        100% { transform: translateX(190px); opacity: 0; }
+      }
+      @keyframes packet-move-2 {
+        0% { transform: translateX(0px); opacity: 0; }
+        15% { opacity: 1; }
+        85% { opacity: 1; }
+        100% { transform: translateX(190px); opacity: 0; }
+      }
+      @keyframes packet-move-3 {
+        0% { transform: translateX(0px); opacity: 0; }
+        15% { opacity: 1; }
+        85% { opacity: 1; }
+        100% { transform: translateX(190px); opacity: 0; }
+      }
+      @keyframes card-border-pulse {
+        0%, 100% { stroke: #1e293b; }
+        50% { stroke: #38bdf8; }
+      }
+      @keyframes node-glow {
+        0%, 100% { filter: drop-shadow(0 0 3px rgba(56, 189, 248, 0.4)); }
+        50% { filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.8)); }
+      }
+
+      .pulse-wire {
+        stroke-dasharray: 6 6;
+        animation: wire-pulse 2s linear infinite;
+      }
+      .packet-1 {
+        animation: packet-move-1 2.2s ease-in-out infinite;
+      }
+      .packet-2 {
+        animation: packet-move-2 2.2s ease-in-out infinite 0.7s;
+      }
+      .packet-3 {
+        animation: packet-move-3 2.2s ease-in-out infinite 1.4s;
+      }
+      .node-core {
+        animation: node-glow 3s ease-in-out infinite;
+      }
+    </style>
+
+    <linearGradient id="pipe-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030713" />
+      <stop offset="50%" stop-color="#070e24" />
+      <stop offset="100%" stop-color="#020510" />
+    </linearGradient>
+
+    <linearGradient id="node-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c1738" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#060c20" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="flow-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="35%" stop-color="#34d399" />
+      <stop offset="70%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <pattern id="diag-dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.7" fill="#334155" fill-opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <!-- Container Frame -->
+  <rect x="0.5" y="0.5" width="899" height="239" rx="12" fill="url(#pipe-bg)" stroke="#1e293b" stroke-width="1.2" />
+  <rect x="1" y="32" width="898" height="207" fill="url(#diag-dots)" />
+
+  <!-- Window Header -->
+  <path d="M 0 12 C 0 5.37 5.37 0 12 0 L 888 0 C 894.63 0 900 5.37 900 12 L 900 32 L 0 32 Z" fill="#080e20" />
+  <line x1="0" y1="32" x2="900" y2="32" stroke="#1e293b" />
+
+  <circle cx="18" cy="16" r="4" fill="#38bdf8" />
+  <text x="30" y="19.5" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#f8fafc" font-weight="700" letter-spacing="0.5">
+    SYSTEMS ARCHITECTURE PIPELINE // END-TO-END DATAFLOW &amp; EXECUTION
+  </text>
+  <text x="880" y="19.5" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10" fill="#34d399" text-anchor="end" letter-spacing="0.5">
+    ● ACTIVE RUNTIME VERIFICATION
+  </text>
+
+  <!-- DATAFLOW CONNECTING WIRES WITH PACKET PULSES -->
+  <!-- Wire 1 -> 2 -->
+  <g transform="translate(202, 120)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#334155" stroke-width="2" />
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#f59e0b" stroke-width="2" class="pulse-wire" />
+    <!-- Moving Packet -->
+    <g class="packet-1">
+      <circle cx="0" cy="0" r="4" fill="#f59e0b" filter="drop-shadow(0 0 5px #f59e0b)" />
+    </g>
+  </g>
+
+  <!-- Wire 2 -> 3 -->
+  <g transform="translate(422, 120)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#334155" stroke-width="2" />
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#34d399" stroke-width="2" class="pulse-wire" />
+    <!-- Moving Packet -->
+    <g class="packet-2">
+      <circle cx="0" cy="0" r="4" fill="#34d399" filter="drop-shadow(0 0 5px #34d399)" />
+    </g>
+  </g>
+
+  <!-- Wire 3 -> 4 -->
+  <g transform="translate(642, 120)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#334155" stroke-width="2" />
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#38bdf8" stroke-width="2" class="pulse-wire" />
+    <!-- Moving Packet -->
+    <g class="packet-3">
+      <circle cx="0" cy="0" r="4" fill="#38bdf8" filter="drop-shadow(0 0 5px #38bdf8)" />
+    </g>
+  </g>
+
+  <!-- 4 ARCHITECTURE TIER CARDS -->
+
+  <!-- Tier 1: Low-Level Core -->
+  <g transform="translate(18, 48)">
+    <rect x="0" y="0" width="184" height="174" rx="9" fill="url(#node-bg)" stroke="#f59e0b" stroke-width="1.2" />
+    <rect x="10" y="10" width="164" height="24" rx="5" fill="#1e1808" stroke="#78350f" />
+    <circle cx="22" cy="22" r="3" fill="#f59e0b" />
+    <text x="30" y="25.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#f59e0b" font-weight="700">
+      01 · LOW-LEVEL CORE
+    </text>
+
+    <text x="14" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#f8fafc">
+      Deterministic Engine
+    </text>
+    <text x="14" y="68" font-family="ui-monospace, monospace" font-size="9.5" fill="#fbbf24">
+      C++20 · C · Memory
+    </text>
+
+    <line x1="12" y1="78" x2="172" y2="78" stroke="#1e293b" />
+
+    <g transform="translate(14, 94)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1">
+      <text y="0">✦ Manual Pointers &amp; Heap</text>
+      <text y="18">✦ Rule Decision Trees</text>
+      <text y="36">✦ Sub-ms Determinism</text>
+      <text y="56" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">Repo: ZENETH &amp; C-prog</text>
+    </g>
+  </g>
+
+  <!-- Tier 2: Spatial & Data Fabric -->
+  <g transform="translate(232, 48)">
+    <rect x="0" y="0" width="190" height="174" rx="9" fill="url(#node-bg)" stroke="#34d399" stroke-width="1.2" />
+    <rect x="10" y="10" width="170" height="24" rx="5" fill="#062215" stroke="#065f46" />
+    <circle cx="22" cy="22" r="3" fill="#34d399" />
+    <text x="30" y="25.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#34d399" font-weight="700">
+      02 · DATA &amp; SPATIAL
+    </text>
+
+    <text x="14" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#f8fafc">
+      Spatial &amp; Vector Fabric
+    </text>
+    <text x="14" y="68" font-family="ui-monospace, monospace" font-size="9.5" fill="#34d399">
+      PostGIS 3.6 · pgvector
+    </text>
+
+    <line x1="12" y1="78" x2="178" y2="78" stroke="#1e293b" />
+
+    <g transform="translate(14, 94)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1">
+      <text y="0">✦ ST_DWithin Radius Math</text>
+      <text y="18">✦ 15 Supabase RLS Policies</text>
+      <text y="36">✦ 40.4% Duplicate Pruning</text>
+      <text y="56" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">Repo: CivicLens &amp; CampusOS</text>
+    </g>
+  </g>
+
+  <!-- Tier 3: Agentic AI & RAG -->
+  <g transform="translate(452, 48)">
+    <rect x="0" y="0" width="190" height="174" rx="9" fill="url(#node-bg)" stroke="#38bdf8" stroke-width="1.2" class="node-core" />
+    <rect x="10" y="10" width="170" height="24" rx="5" fill="#08223d" stroke="#0369a1" />
+    <circle cx="22" cy="22" r="3" fill="#38bdf8" />
+    <text x="30" y="25.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#38bdf8" font-weight="700">
+      03 · AGENTIC AI CORE
+    </text>
+
+    <text x="14" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#f8fafc">
+      Self-Reflective RAG
+    </text>
+    <text x="14" y="68" font-family="ui-monospace, monospace" font-size="9.5" fill="#38bdf8">
+      Gemini 2.5 · BM25 Hybrid
+    </text>
+
+    <line x1="12" y1="78" x2="178" y2="78" stroke="#1e293b" />
+
+    <g transform="translate(14, 94)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1">
+      <text y="0">✦ Query Routing &amp; Grading</text>
+      <text y="18">✦ Cross-Encoder Verifier</text>
+      <text y="36">✦ Multimodal Vision Triage</text>
+      <text y="56" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">Repo: Agentic-RAG-Engine</text>
+    </g>
+  </g>
+
+  <!-- Tier 4: Platform & Streaming -->
+  <g transform="translate(672, 48)">
+    <rect x="0" y="0" width="206" height="174" rx="9" fill="url(#node-bg)" stroke="#818cf8" stroke-width="1.2" />
+    <rect x="10" y="10" width="186" height="24" rx="5" fill="#17163d" stroke="#4338ca" />
+    <circle cx="22" cy="22" r="3" fill="#818cf8" />
+    <text x="30" y="25.5" font-family="ui-monospace, monospace" font-size="9.5" fill="#818cf8" font-weight="700">
+      04 · PRODUCTION PLATFORM
+    </text>
+
+    <text x="14" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#f8fafc">
+      Distributed SaaS
+    </text>
+    <text x="14" y="68" font-family="ui-monospace, monospace" font-size="9.5" fill="#818cf8">
+      Next.js 16 · FastAPI · SSE
+    </text>
+
+    <line x1="12" y1="78" x2="194" y2="78" stroke="#1e293b" />
+
+    <g transform="translate(14, 94)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1">
+      <text y="0">✦ Server-Sent Event Streams</text>
+      <text y="18">✦ Multi-Tenant Institutional RBAC</text>
+      <text y="36">✦ Dockerized Microservices</text>
+      <text y="56" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">Repo: CampusOS AI &amp; CivicLens</text>
+    </g>
+  </g>
+</svg>

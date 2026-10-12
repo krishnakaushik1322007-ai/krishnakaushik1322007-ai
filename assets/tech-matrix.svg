@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="900" height="230" fill="none">
+  <defs>
+    <style>
+      @keyframes shimmer-sweep-tech {
+        0% { transform: translateX(-150px); }
+        100% { transform: translateX(450px); }
+      }
+      @keyframes pill-pulse {
+        0%, 100% { border-color: #1e293b; }
+        50% { border-color: #38bdf8; }
+      }
+      .shimmer-bar {
+        animation: shimmer-sweep-tech 4s ease-in-out infinite;
+      }
+      .tag-pill {
+        animation: pill-pulse 3s ease-in-out infinite;
+      }
+    </style>
+
+    <linearGradient id="t-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030713" />
+      <stop offset="50%" stop-color="#080e22" />
+      <stop offset="100%" stop-color="#030612" />
+    </linearGradient>
+
+    <linearGradient id="t-panel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c1636" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#060c20" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="shimmer-light" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <pattern id="t-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.65" fill="#334155" fill-opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="0.5" y="0.5" width="899" height="229" rx="12" fill="url(#t-bg)" stroke="#1e293b" stroke-width="1.2" />
+  <rect x="1" y="32" width="898" height="197" fill="url(#t-grid)" />
+
+  <!-- Top Bar -->
+  <path d="M 0 12 C 0 5.37 5.37 0 12 0 L 888 0 C 894.63 0 900 5.37 900 12 L 900 32 L 0 32 Z" fill="#080e20" />
+  <line x1="0" y1="32" x2="900" y2="32" stroke="#1e293b" />
+
+  <circle cx="18" cy="16" r="4" fill="#38bdf8" />
+  <text x="30" y="19.5" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#f8fafc" font-weight="700" letter-spacing="0.5">
+    TECHNICAL STACK MATRIX // GROUNDED IN PRODUCTION REPOSITORIES
+  </text>
+  <text x="880" y="19.5" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10" fill="#34d399" text-anchor="end" letter-spacing="0.5">
+    ● 100% SHIPPED &amp; TESTED
+  </text>
+
+  <!-- 4 COLUMNS -->
+  <!-- Col 1: Low-Level -->
+  <g transform="translate(18, 44)">
+    <rect x="0" y="0" width="204" height="172" rx="8" fill="url(#t-panel)" stroke="#1e293b" />
+    <circle cx="14" cy="16" r="3.5" fill="#f59e0b" />
+    <text x="24" y="19.5" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#f59e0b">
+      01 · SYSTEMS &amp; C/C++
+    </text>
+    <line x1="10" y1="28" x2="194" y2="28" stroke="#1e293b" />
+
+    <g transform="translate(12, 44)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1">
+      <text y="0">✦ <tspan fill="#ffffff" font-weight="600">C++ (C++20, STL)</tspan></text>
+      <text y="20">✦ <tspan fill="#ffffff" font-weight="600">C (ANSI C)</tspan></text>
+      <text y="40">✦ Manual Dynamic Memory</text>
+      <text y="60">✦ Pointer Arithmetic</text>
+      <text y="80">✦ Deterministic OOP Trees</text>
+      <text y="104" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">Repos: ZENETH, C-prog</text>
+    </g>
+  </g>
+
+  <!-- Col 2: Frontier AI Core -->
+  <g transform="translate(236, 44)">
+    <rect x="0" y="0" width="204" height="172" rx="8" fill="url(#t-panel)" stroke="#1e293b" />
+    <circle cx="14" cy="16" r="3.5" fill="#38bdf8" />
+    <text x="24" y="19.5" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#38bdf8">
+      02 · AI &amp; AGENTIC CORE
+    </text>
+    <line x1="10" y1="28" x2="194" y2="28" stroke="#1e293b" />
+
+    <g transform="translate(12, 44)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1">
+      <text y="0">✦ <tspan fill="#ffffff" font-weight="600">Gemini 2.5 Flash SDK</tspan></text>
+      <text y="20">✦ <tspan fill="#ffffff" font-weight="600">Self-Reflective RAG</tspan></text>
+      <text y="40">✦ pgvector Vector Search</text>
+      <text y="60">✦ BM25 Hybrid Retrieval</text>
+      <text y="80">✦ Cross-Encoder Verifier</text>
+      <text y="104" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">Repos: Agentic-RAG, CampusOS</text>
+    </g>
+  </g>
+
+  <!-- Col 3: Spatial & Database -->
+  <g transform="translate(454, 44)">
+    <rect x="0" y="0" width="204" height="172" rx="8" fill="url(#t-panel)" stroke="#1e293b" />
+    <circle cx="14" cy="16" r="3.5" fill="#34d399" />
+    <text x="24" y="19.5" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#34d399">
+      03 · SPATIAL &amp; DATA
+    </text>
+    <line x1="10" y1="28" x2="194" y2="28" stroke="#1e293b" />
+
+    <g transform="translate(12, 44)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1">
+      <text y="0">✦ <tspan fill="#ffffff" font-weight="600">PostGIS 3.6 (ST_DWithin)</tspan></text>
+      <text y="20">✦ <tspan fill="#ffffff" font-weight="600">PostgreSQL Relational</tspan></text>
+      <text y="40">✦ 15 Supabase RLS Policies</text>
+      <text y="60">✦ Geospatial Clustered Math</text>
+      <text y="80">✦ JWT Role-Based Auth</text>
+      <text y="104" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">Repos: CivicLens, CampusOS</text>
+    </g>
+  </g>
+
+  <!-- Col 4: Platform & Cloud -->
+  <g transform="translate(672, 44)">
+    <rect x="0" y="0" width="210" height="172" rx="8" fill="url(#t-panel)" stroke="#1e293b" />
+    <circle cx="14" cy="16" r="3.5" fill="#818cf8" />
+    <text x="24" y="19.5" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#818cf8">
+      04 · CLOUD &amp; PLATFORM
+    </text>
+    <line x1="10" y1="28" x2="200" y2="28" stroke="#1e293b" />
+
+    <g transform="translate(12, 44)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1">
+      <text y="0">✦ <tspan fill="#ffffff" font-weight="600">Next.js 16 (App Router)</tspan></text>
+      <text y="20">✦ <tspan fill="#ffffff" font-weight="600">TypeScript / Python 3.11</tspan></text>
+      <text y="40">✦ FastAPI &amp; Pydantic v2</text>
+      <text y="60">✦ Server-Sent Events (SSE)</text>
+      <text y="80">✦ Docker Microservices</text>
+      <text y="104" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">Repos: CampusOS, CivicLens</text>
+    </g>
+  </g>
+</svg>
