@@ -1,137 +1,174 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="900" height="240" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260" fill="none">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080c14" />
-      <stop offset="60%" stop-color="#0b1120" />
-      <stop offset="100%" stop-color="#070a12" />
+    <!-- Background Base Gradient -->
+    <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712" />
+      <stop offset="50%" stop-color="#080e1e" />
+      <stop offset="100%" stop-color="#040711" />
     </linearGradient>
 
-    <!-- Border Gradient -->
-    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
-      <stop offset="40%" stop-color="#818cf8" stop-opacity="0.3" />
-      <stop offset="80%" stop-color="#34d399" stop-opacity="0.5" />
-      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.2" />
+    <!-- Glowing Outer Border Gradient -->
+    <linearGradient id="hero-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#818cf8" stop-opacity="0.5" />
+      <stop offset="70%" stop-color="#c084fc" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.7" />
     </linearGradient>
 
-    <!-- Code Panel Gradient -->
-    <linearGradient id="code-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#050811" />
-      <stop offset="100%" stop-color="#070b16" />
-    </linearGradient>
+    <!-- Ambient Aurora Radial Glows -->
+    <radialGradient id="aurora-cyan" cx="15%" cy="20%" r="45%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="aurora-purple" cx="80%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+    </radialGradient>
 
-    <!-- Subtle Dot Pattern -->
-    <pattern id="grid-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.75" fill="#334155" fill-opacity="0.45" />
+    <!-- Subtle Grid Pattern -->
+    <pattern id="hero-grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#334155" fill-opacity="0.4" />
     </pattern>
 
-    <!-- Glow effect -->
-    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
+    <!-- Telemetry Card Gradient -->
+    <linearGradient id="card-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#060a17" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Progress Bar Gradients -->
+    <linearGradient id="bar-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    <linearGradient id="bar-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="bar-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
   </defs>
 
   <!-- Container Box -->
-  <rect x="0.5" y="0.5" width="899" height="239" rx="12" fill="url(#bg-grad)" stroke="url(#border-grad)" stroke-width="1" />
+  <rect x="0.5" y="0.5" width="899" height="259" rx="14" fill="url(#hero-bg)" stroke="url(#hero-border)" stroke-width="1.2" />
 
-  <!-- Background Dots -->
-  <rect x="1" y="32" width="898" height="206" fill="url(#grid-pattern)" />
+  <!-- Ambient Glow Layers -->
+  <rect x="1" y="1" width="898" height="258" rx="14" fill="url(#aurora-cyan)" />
+  <rect x="1" y="1" width="898" height="258" rx="14" fill="url(#aurora-purple)" />
+  <rect x="1" y="34" width="898" height="225" fill="url(#hero-grid)" />
 
-  <!-- Window Header Bar -->
-  <path d="M 0 12 C 0 5.37 5.37 0 12 0 L 888 0 C 894.63 0 900 5.37 900 12 L 900 32 L 0 32 Z" fill="#0d1424" />
-  <line x1="0" y1="32" x2="900" y2="32" stroke="#1e293b" stroke-width="1" />
+  <!-- Window Title Bar -->
+  <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 886 0 C 893.73 0 900 6.27 900 14 L 900 34 L 0 34 Z" fill="#090f1d" />
+  <line x1="0" y1="34" x2="900" y2="34" stroke="#1e293b" stroke-width="1" />
 
-  <!-- Window Control Dots -->
-  <circle cx="20" cy="16" r="4.5" fill="#ef4444" opacity="0.85" />
-  <circle cx="36" cy="16" r="4.5" fill="#f59e0b" opacity="0.85" />
-  <circle cx="52" cy="16" r="4.5" fill="#10b981" opacity="0.85" />
+  <!-- Window Buttons -->
+  <circle cx="20" cy="17" r="4.5" fill="#ef4444" opacity="0.9" />
+  <circle cx="36" cy="17" r="4.5" fill="#f59e0b" opacity="0.9" />
+  <circle cx="52" cy="17" r="4.5" fill="#10b981" opacity="0.9" />
 
-  <!-- Window Title -->
-  <text x="74" y="20" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#64748b" letter-spacing="0.5">
-    krishna-kaushik // ai-systems-core [architecture-runtime]
+  <!-- Window Header Label -->
+  <text x="74" y="21" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#64748b" letter-spacing="0.5">
+    krishna-kaushik // ai-systems-runtime [spec-v2.6]
   </text>
-  <text x="876" y="20" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#38bdf8" text-anchor="end" letter-spacing="0.5">
-    vLLM · PostGIS · CUDA
+  <text x="876" y="21" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#38bdf8" text-anchor="end" letter-spacing="0.5">
+    CUDA · vLLM · PostGIS 3.6 · Agentic RAG
   </text>
 
-  <!-- Left Content Column -->
-  <!-- Status Badge -->
-  <g transform="translate(28, 50)">
-    <rect x="0" y="0" width="310" height="22" rx="11" fill="#0f172a" stroke="#1e293b" />
-    <circle cx="11" cy="11" r="3.5" fill="#10b981" />
-    <circle cx="11" cy="11" r="6" fill="#10b981" opacity="0.25" />
-    <text x="24" y="15" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10" fill="#94a3b8" letter-spacing="0.6">
-      ONLINE · SHOOLINI UNIVERSITY (CSE-AI) · INDIA
+  <!-- LEFT COLUMN -->
+  <!-- Live Status Badge -->
+  <g transform="translate(30, 52)">
+    <rect x="0" y="0" width="315" height="23" rx="11.5" fill="#0b132b" stroke="#1e293b" />
+    <circle cx="12" cy="11.5" r="3.5" fill="#10b981" />
+    <circle cx="12" cy="11.5" r="6" fill="#10b981" opacity="0.25" />
+    <text x="26" y="15" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10" fill="#94a3b8" letter-spacing="0.8">
+      ACTIVE // SHOOLINI UNIVERSITY (CSE-AI) // INDIA
     </text>
   </g>
 
   <!-- Name -->
-  <text x="28" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#f8fafc" letter-spacing="-0.5">
+  <text x="30" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="800" fill="#f8fafc" letter-spacing="-0.6">
     Krishna Kaushik
   </text>
 
   <!-- Role Subtitle -->
-  <text x="28" y="130" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="13" font-weight="600" fill="#38bdf8" letter-spacing="0.2">
+  <text x="30" y="136" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="13" font-weight="600" fill="#38bdf8" letter-spacing="0.3">
     AI Systems Architect &amp; Low-Level Computing Researcher
   </text>
 
-  <!-- Philosophy / Bio text -->
-  <text x="28" y="154" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#94a3b8">
-    Bridging bare-metal efficiency (C/C++, CUDA) with scalable intelligence
+  <!-- Bio -->
+  <text x="30" y="162" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#cbd5e1">
+    Synthesizing bare-metal speed (C/C++, CUDA, cache locality) with
   </text>
-  <text x="28" y="172" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#94a3b8">
-    (vLLM inference serving, spatial computing, and self-reflective RAG).
+  <text x="30" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#cbd5e1">
+    autonomous intelligence (vLLM serving, PostGIS, and self-reflective RAG).
   </text>
 
   <!-- Bottom Pills -->
-  <g transform="translate(28, 192)">
-    <!-- Pill 1 -->
-    <rect x="0" y="0" width="102" height="24" rx="6" fill="#0f172a" stroke="#334155" />
+  <g transform="translate(30, 204)">
+    <rect x="0" y="0" width="98" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
     <circle cx="10" cy="12" r="3" fill="#38bdf8" />
-    <text x="18" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#cbd5e1">C++ / CUDA</text>
+    <text x="18" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#e2e8f0">C++ / CUDA</text>
 
-    <!-- Pill 2 -->
-    <rect x="110" y="0" width="112" height="24" rx="6" fill="#0f172a" stroke="#334155" />
-    <circle cx="120" cy="12" r="3" fill="#a855f7" />
-    <text x="128" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#cbd5e1">vLLM Inference</text>
+    <rect x="106" y="0" width="112" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
+    <circle cx="116" cy="12" r="3" fill="#a855f7" />
+    <text x="124" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#e2e8f0">vLLM Inference</text>
 
-    <!-- Pill 3 -->
-    <rect x="230" y="0" width="102" height="24" rx="6" fill="#0f172a" stroke="#334155" />
-    <circle cx="240" cy="12" r="3" fill="#10b981" />
-    <text x="248" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#cbd5e1">PostGIS 3.6</text>
+    <rect x="226" y="0" width="102" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
+    <circle cx="236" cy="12" r="3" fill="#10b981" />
+    <text x="244" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#e2e8f0">PostGIS 3.6</text>
 
-    <!-- Pill 4 -->
-    <rect x="340" y="0" width="112" height="24" rx="6" fill="#0f172a" stroke="#334155" />
-    <circle cx="350" cy="12" r="3" fill="#f59e0b" />
-    <text x="358" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#cbd5e1">Agentic RAG</text>
+    <rect x="336" y="0" width="112" height="24" rx="6" fill="#0f172a" stroke="#1e293b" />
+    <circle cx="346" cy="12" r="3" fill="#f59e0b" />
+    <text x="354" y="16" font-family="ui-monospace, monospace" font-size="10.5" fill="#e2e8f0">Agentic RAG</text>
   </g>
 
-  <!-- Right Code / Manifest Card -->
-  <g transform="translate(520, 48)">
-    <!-- Window card -->
-    <rect x="0" y="0" width="352" height="172" rx="8" fill="url(#code-bg)" stroke="#1e293b" />
-    
-    <!-- Header of mini card -->
-    <path d="M 0 8 C 0 3.58 3.58 0 8 0 L 344 0 C 348.42 0 352 3.58 352 8 L 352 24 L 0 24 Z" fill="#0b1120" />
-    <line x1="0" y1="24" x2="352" y2="24" stroke="#1e293b" stroke-width="1" />
-    <circle cx="12" cy="12" r="3" fill="#334155" />
-    <circle cx="22" cy="12" r="3" fill="#334155" />
-    <circle cx="32" cy="12" r="3" fill="#334155" />
-    <text x="44" y="16" font-family="ui-monospace, monospace" font-size="9.5" fill="#64748b">runtime_spec.json</text>
-    <text x="340" y="16" font-family="ui-monospace, monospace" font-size="9" fill="#10b981" text-anchor="end">● verified</text>
+  <!-- RIGHT TELEMETRY & COMPUTE CARD -->
+  <g transform="translate(530, 50)">
+    <rect x="0" y="0" width="340" height="178" rx="10" fill="url(#card-glass)" stroke="#1e293b" stroke-width="1" />
 
-    <!-- Code Snippet -->
-    <g transform="translate(16, 42)" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" line-height="1.5">
-      <text y="0" fill="#64748b">{</text>
-      <text y="18" fill="#94a3b8">  <tspan fill="#38bdf8">"architect"</tspan>: <tspan fill="#f1f5f9">"Krishna Kaushik"</tspan>,</text>
-      <text y="36" fill="#94a3b8">  <tspan fill="#38bdf8">"focus"</tspan>: <tspan fill="#f1f5f9">"Low-Latency AI Serving"</tspan>,</text>
-      <text y="54" fill="#94a3b8">  <tspan fill="#38bdf8">"spatial_engine"</tspan>: <tspan fill="#f1f5f9">"CivicLens (PostGIS)"</tspan>,</text>
-      <text y="72" fill="#94a3b8">  <tspan fill="#38bdf8">"core_stack"</tspan>: [<tspan fill="#a855f7">"C++"</tspan>, <tspan fill="#a855f7">"CUDA"</tspan>, <tspan fill="#a855f7">"vLLM"</tspan>],</text>
-      <text y="90" fill="#94a3b8">  <tspan fill="#38bdf8">"optimization"</tspan>: <tspan fill="#10b981">"sub-12ms TTFT"</tspan>,</text>
-      <text y="108" fill="#94a3b8">  <tspan fill="#38bdf8">"status"</tspan>: <tspan fill="#34d399">"Open for Collaboration"</tspan></text>
-      <text y="126" fill="#64748b">}</text>
+    <!-- Card Header -->
+    <path d="M 0 10 C 0 4.47 4.47 0 10 0 L 330 0 C 335.53 0 340 4.47 340 10 L 340 26 L 0 26 Z" fill="#070c18" />
+    <line x1="0" y1="26" x2="340" y2="26" stroke="#1e293b" />
+    <circle cx="12" cy="13" r="3" fill="#334155" />
+    <circle cx="22" cy="13" r="3" fill="#334155" />
+    <text x="34" y="17" font-family="ui-monospace, monospace" font-size="9.5" fill="#64748b">ENGINEERING_METRICS.sys</text>
+    <text x="328" y="17" font-family="ui-monospace, monospace" font-size="9" fill="#10b981" text-anchor="end">● OPTIMIZED</text>
+
+    <!-- Metrics rows -->
+    <!-- Metric 1 -->
+    <g transform="translate(16, 42)">
+      <text y="0" font-family="ui-monospace, monospace" font-size="10" fill="#94a3b8">Inference TTFT</text>
+      <text x="308" y="0" font-family="ui-monospace, monospace" font-size="10" fill="#34d399" text-anchor="end" font-weight="600">&lt; 12ms</text>
+      <rect x="0" y="6" width="308" height="4" rx="2" fill="#1e293b" />
+      <rect x="0" y="6" width="280" height="4" rx="2" fill="url(#bar-green)" />
+    </g>
+
+    <!-- Metric 2 -->
+    <g transform="translate(16, 74)">
+      <text y="0" font-family="ui-monospace, monospace" font-size="10" fill="#94a3b8">Spatial Noise Reduction</text>
+      <text x="308" y="0" font-family="ui-monospace, monospace" font-size="10" fill="#38bdf8" text-anchor="end" font-weight="600">40.4%</text>
+      <rect x="0" y="6" width="308" height="4" rx="2" fill="#1e293b" />
+      <rect x="0" y="6" width="245" height="4" rx="2" fill="url(#bar-blue)" />
+    </g>
+
+    <!-- Metric 3 -->
+    <g transform="translate(16, 106)">
+      <text y="0" font-family="ui-monospace, monospace" font-size="10" fill="#94a3b8">PostgreSQL RLS Policies</text>
+      <text x="308" y="0" font-family="ui-monospace, monospace" font-size="10" fill="#c084fc" text-anchor="end" font-weight="600">14 Verified</text>
+      <rect x="0" y="6" width="308" height="4" rx="2" fill="#1e293b" />
+      <rect x="0" y="6" width="290" height="4" rx="2" fill="url(#bar-purple)" />
+    </g>
+
+    <!-- Status footer -->
+    <g transform="translate(16, 142)">
+      <text y="0" font-family="ui-monospace, monospace" font-size="9.5" fill="#64748b">
+        Core: <tspan fill="#e2e8f0">C++20</tspan> · <tspan fill="#e2e8f0">CUDA</tspan> · <tspan fill="#e2e8f0">PyTorch</tspan> · <tspan fill="#e2e8f0">vLLM</tspan>
+      </text>
+      <text x="308" y="0" font-family="ui-monospace, monospace" font-size="9.5" fill="#38bdf8" text-anchor="end">
+        Open for Ventures ↗
+      </text>
     </g>
   </g>
 </svg>

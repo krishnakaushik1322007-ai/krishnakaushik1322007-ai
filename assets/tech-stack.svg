@@ -1,106 +1,118 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 205" width="900" height="205" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 215" width="900" height="215" fill="none">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="stack-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080c14" />
-      <stop offset="100%" stop-color="#0a0f1d" />
+      <stop offset="0%" stop-color="#050812" />
+      <stop offset="50%" stop-color="#0a1024" />
+      <stop offset="100%" stop-color="#060914" />
+    </linearGradient>
+
+    <!-- Outer Border Gradient -->
+    <linearGradient id="stack-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="35%" stop-color="#818cf8" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.6" />
     </linearGradient>
 
     <!-- Sub Card Gradient -->
     <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#090e1a" stop-opacity="0.8" />
+      <stop offset="0%" stop-color="#0d142b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#070a16" stop-opacity="0.9" />
     </linearGradient>
 
     <!-- Subtle Dot Pattern -->
-    <pattern id="stack-dots" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.65" fill="#334155" fill-opacity="0.35" />
+    <pattern id="stack-dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.75" fill="#334155" fill-opacity="0.35" />
     </pattern>
   </defs>
 
-  <!-- Outer Card Frame -->
-  <rect x="0.5" y="0.5" width="899" height="204" rx="10" fill="url(#stack-bg)" stroke="#1e293b" />
-  <rect x="1" y="30" width="898" height="174" fill="url(#stack-dots)" />
+  <!-- Outer Frame -->
+  <rect x="0.5" y="0.5" width="899" height="214" rx="12" fill="url(#stack-bg)" stroke="url(#stack-border)" stroke-width="1.2" />
+  <rect x="1" y="32" width="898" height="182" fill="url(#stack-dots)" />
 
   <!-- Top Bar -->
-  <path d="M 0 10 C 0 4.47 4.47 0 10 0 L 890 0 C 895.53 0 900 4.47 900 10 L 900 30 L 0 30 Z" fill="#0d1424" />
-  <line x1="0" y1="30" x2="900" y2="30" stroke="#1e293b" />
+  <path d="M 0 12 C 0 5.37 5.37 0 12 0 L 888 0 C 894.63 0 900 5.37 900 12 L 900 32 L 0 32 Z" fill="#090f1f" />
+  <line x1="0" y1="32" x2="900" y2="32" stroke="#1e293b" />
 
-  <text x="18" y="19" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#64748b" letter-spacing="0.5">
+  <circle cx="20" cy="16" r="4" fill="#38bdf8" opacity="0.8" />
+  <text x="32" y="20" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#64748b" letter-spacing="0.6">
     TECHNICAL SURFACE  //  ENGINEERING &amp; RESEARCH STACK
   </text>
-  <text x="882" y="19" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10" fill="#38bdf8" text-anchor="end">
-    CORE DOMAINS
+  <text x="880" y="20" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" fill="#38bdf8" text-anchor="end" letter-spacing="0.5">
+    4 ARCHITECTURAL TIERS
   </text>
 
   <!-- 4 Bento Columns -->
   <!-- Col 1: Systems & Low-Level -->
-  <g transform="translate(18, 42)">
-    <rect x="0" y="0" width="202" height="148" rx="8" fill="url(#card-grad)" stroke="#1e293b" />
-    <!-- Header pill -->
+  <g transform="translate(18, 44)">
+    <rect x="0" y="0" width="202" height="156" rx="8" fill="url(#card-grad)" stroke="#1e293b" />
     <circle cx="14" cy="18" r="3.5" fill="#38bdf8" />
-    <text x="24" y="21" font-family="ui-monospace, monospace" font-size="10.5" font-weight="600" fill="#38bdf8" letter-spacing="0.4">
+    <text x="24" y="21" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#38bdf8" letter-spacing="0.4">
       01 / LOW-LEVEL &amp; SYS
     </text>
     <line x1="10" y1="32" x2="192" y2="32" stroke="#1e293b" />
 
-    <!-- Items -->
-    <g transform="translate(14, 48)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
+    <g transform="translate(14, 50)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
       <text y="0">✦ <tspan fill="#f8fafc" font-weight="600">C &amp; C++</tspan> (STL, Memory, OOP)</text>
-      <text y="24">✦ <tspan fill="#f8fafc" font-weight="600">CUDA</tspan> (Parallel Acceleration)</text>
+      <text y="24">✦ <tspan fill="#f8fafc" font-weight="600">CUDA</tspan> (GPU Parallelism)</text>
       <text y="48">✦ <tspan fill="#f8fafc">Linux &amp; POSIX Shell</tspan></text>
       <text y="72">✦ <tspan fill="#94a3b8">Cache Locality &amp; Pointers</tspan></text>
+      <text y="94">✦ <tspan fill="#64748b">Algorithmic Complexity</tspan></text>
     </g>
   </g>
 
   <!-- Col 2: AI & Inference -->
-  <g transform="translate(236, 42)">
-    <rect x="0" y="0" width="202" height="148" rx="8" fill="url(#card-grad)" stroke="#1e293b" />
+  <g transform="translate(236, 44)">
+    <rect x="0" y="0" width="202" height="156" rx="8" fill="url(#card-grad)" stroke="#1e293b" />
     <circle cx="14" cy="18" r="3.5" fill="#a855f7" />
-    <text x="24" y="21" font-family="ui-monospace, monospace" font-size="10.5" font-weight="600" fill="#a855f7" letter-spacing="0.4">
+    <text x="24" y="21" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#c084fc" letter-spacing="0.4">
       02 / AI &amp; INFERENCE
     </text>
     <line x1="10" y1="32" x2="192" y2="32" stroke="#1e293b" />
 
-    <g transform="translate(14, 48)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
+    <g transform="translate(14, 50)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
       <text y="0">✦ <tspan fill="#f8fafc" font-weight="600">PyTorch</tspan> &amp; Transformers</text>
       <text y="24">✦ <tspan fill="#f8fafc" font-weight="600">vLLM</tspan> (PagedAttention)</text>
-      <text y="48">✦ <tspan fill="#f8fafc">Agentic &amp; Self-Reflective RAG</tspan></text>
+      <text y="48">✦ <tspan fill="#f8fafc">Self-Reflective RAG</tspan></text>
       <text y="72">✦ <tspan fill="#94a3b8">FlashAttention &amp; QLoRA</tspan></text>
+      <text y="94">✦ <tspan fill="#64748b">Dynamic Routing &amp; Eval</tspan></text>
     </g>
   </g>
 
   <!-- Col 3: Spatial & Data -->
-  <g transform="translate(454, 42)">
-    <rect x="0" y="0" width="202" height="148" rx="8" fill="url(#card-grad)" stroke="#1e293b" />
+  <g transform="translate(454, 44)">
+    <rect x="0" y="0" width="202" height="156" rx="8" fill="url(#card-grad)" stroke="#1e293b" />
     <circle cx="14" cy="18" r="3.5" fill="#10b981" />
-    <text x="24" y="21" font-family="ui-monospace, monospace" font-size="10.5" font-weight="600" fill="#10b981" letter-spacing="0.4">
+    <text x="24" y="21" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#34d399" letter-spacing="0.4">
       03 / SPATIAL &amp; DATA
     </text>
     <line x1="10" y1="32" x2="192" y2="32" stroke="#1e293b" />
 
-    <g transform="translate(14, 48)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
+    <g transform="translate(14, 50)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
       <text y="0">✦ <tspan fill="#f8fafc" font-weight="600">PostGIS 3.6</tspan> (Spatial Math)</text>
       <text y="24">✦ <tspan fill="#f8fafc" font-weight="600">PostgreSQL</tspan> &amp; Supabase RLS</text>
       <text y="48">✦ <tspan fill="#f8fafc">pgvector &amp; Qdrant</tspan></text>
-      <text y="72">✦ <tspan fill="#94a3b8">Dense/Sparse Hybrid Index</tspan></text>
+      <text y="72">✦ <tspan fill="#94a3b8">Dense/Sparse Hybrid Search</tspan></text>
+      <text y="94">✦ <tspan fill="#64748b">ST_DWithin Deduplication</tspan></text>
     </g>
   </g>
 
   <!-- Col 4: Platform & Cloud -->
-  <g transform="translate(672, 42)">
-    <rect x="0" y="0" width="210" height="148" rx="8" fill="url(#card-grad)" stroke="#1e293b" />
+  <g transform="translate(672, 44)">
+    <rect x="0" y="0" width="210" height="156" rx="8" fill="url(#card-grad)" stroke="#1e293b" />
     <circle cx="14" cy="18" r="3.5" fill="#f59e0b" />
-    <text x="24" y="21" font-family="ui-monospace, monospace" font-size="10.5" font-weight="600" fill="#f59e0b" letter-spacing="0.4">
+    <text x="24" y="21" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#f59e0b" letter-spacing="0.4">
       04 / PLATFORM &amp; CLOUD
     </text>
     <line x1="10" y1="32" x2="200" y2="32" stroke="#1e293b" />
 
-    <g transform="translate(14, 48)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
+    <g transform="translate(14, 50)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">
       <text y="0">✦ <tspan fill="#f8fafc" font-weight="600">FastAPI</tspan> (Async Python)</text>
       <text y="24">✦ <tspan fill="#f8fafc" font-weight="600">Next.js 16</tspan> &amp; React 19</text>
       <text y="48">✦ <tspan fill="#f8fafc">TypeScript &amp; Pydantic</tspan></text>
       <text y="72">✦ <tspan fill="#94a3b8">Docker &amp; Microservices</tspan></text>
+      <text y="94">✦ <tspan fill="#64748b">RESTful API Design</tspan></text>
     </g>
   </g>
 </svg>

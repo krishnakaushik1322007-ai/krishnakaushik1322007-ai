@@ -5,54 +5,39 @@
 <p align="center">
   <code>📍 Himachal Pradesh, India</code> &nbsp;•&nbsp;
   <code>🎓 B.Tech CSE (Artificial Intelligence) — Shoolini University</code> &nbsp;•&nbsp;
-  <code>⚡ Low-Latency Serving &amp; Spatial AI</code>
+  <code>⚡ High-Throughput Serving &amp; Spatial Intelligence</code>
 </p>
 
 ---
 
-### 🏛️ Featured Systems & Architectures
+### 🏛️ Featured Systems &amp; Architectures
 
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <h3 style="margin-top:0;">🏙️ <a href="https://github.com/krishnakaushik1322007-ai/CivicLens">CivicLens</a></h3>
-      <p><b>Autonomous Municipal Spatial Intelligence &amp; 311 Triage</b></p>
-      <p>Consolidates duplicate citizen reports via sub-meter <code>ST_DWithin</code> geospatial clustering, achieving a <b>40.4% noise reduction</b>. Features multimodal triage with Gemini 2.5 Flash vision and an automated 6-factor priority engine.</p>
-      <p><code>PostGIS 3.6</code> &nbsp;·&nbsp; <code>FastAPI</code> &nbsp;·&nbsp; <code>Next.js 16</code> &nbsp;·&nbsp; <code>Gemini</code></p>
-      <p><a href="https://github.com/krishnakaushik1322007-ai/CivicLens"><b>Explore Repository →</b></a></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3 style="margin-top:0;">⚡ <a href="https://github.com/krishnakaushik1322007-ai/Agentic-RAG-Engine">Agentic-RAG-Engine</a></h3>
-      <p><b>Self-Reflective Retrieval &amp; Verification Architecture</b></p>
-      <p>Production RAG engine designed to eliminate hallucination loops. Implements semantic intent routing, hybrid dense/sparse search (BM25 + vector), and grounded cross-encoder verification.</p>
-      <p><code>Python 3.11</code> &nbsp;·&nbsp; <code>FastAPI</code> &nbsp;·&nbsp; <code>Docker</code> &nbsp;·&nbsp; <code>Hybrid Search</code></p>
-      <p><a href="https://github.com/krishnakaushik1322007-ai/Agentic-RAG-Engine"><b>Inspect Architecture →</b></a></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3 style="margin-top:0;">🎓 <a href="https://github.com/krishnakaushik1322007-ai/campus-OS-AI">CampusOS AI</a></h3>
-      <p><b>Enterprise Multi-Tenant Campus Operating SaaS</b></p>
-      <p>Role-isolated institutional platform for students, faculty, and administrators. Enforces fine-grained data security across <b>14 PostgreSQL Row-Level Security policies</b> with a decoupled campus copilot.</p>
-      <p><code>Next.js 16</code> &nbsp;·&nbsp; <code>TypeScript</code> &nbsp;·&nbsp; <code>Supabase RLS</code> &nbsp;·&nbsp; <code>Tailwind</code></p>
-      <p><a href="https://github.com/krishnakaushik1322007-ai/campus-OS-AI"><b>Explore Platform →</b></a></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3 style="margin-top:0;">🌾 <a href="https://github.com/krishnakaushik1322007-ai/Cpp-Project-build-2nd-Sem">ZENETH Diagnostic Engine</a></h3>
-      <p><b>Deterministic Crop Pathology Expert System</b></p>
-      <p>Rule-based algorithmic diagnostic engine for 9+ agricultural crops. Implements symptom decision trees and keyword resolution to provide actionable remediation protocols with zero external runtime deps.</p>
-      <p><code>C++</code> &nbsp;·&nbsp; <code>STL</code> &nbsp;·&nbsp; <code>Knowledge Graph</code> &nbsp;·&nbsp; <code>OOP</code></p>
-      <p><a href="https://github.com/krishnakaushik1322007-ai/Cpp-Project-build-2nd-Sem"><b>Inspect Code →</b></a></p>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/krishnakaushik1322007-ai/CivicLens">
+    <img src="./assets/card-civiclens.svg" alt="CivicLens — Municipal Spatial Intelligence" width="49%">
+  </a>
+  &nbsp;
+  <a href="https://github.com/krishnakaushik1322007-ai/Agentic-RAG-Engine">
+    <img src="./assets/card-rag.svg" alt="Agentic-RAG-Engine — Self-Reflective Retrieval" width="49%">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/krishnakaushik1322007-ai/campus-OS-AI">
+    <img src="./assets/card-campusos.svg" alt="CampusOS AI — Enterprise Multi-Tenant SaaS" width="49%">
+  </a>
+  &nbsp;
+  <a href="https://github.com/krishnakaushik1322007-ai/Cpp-Project-build-2nd-Sem">
+    <img src="./assets/card-zeneth.svg" alt="ZENETH — Deterministic Crop Pathology System" width="49%">
+  </a>
+</p>
 
 ---
 
 ### 🧬 Technical Surface
 
 <p align="center">
-  <img src="./assets/tech-stack.svg" alt="Technical Surface &amp; Systems Stack" width="100%">
+  <img src="./assets/tech-stack.svg" alt="Technical Surface &amp; Specialized Infrastructure" width="100%">
 </p>
 
 ---
