@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 130" width="880" height="130" fill="none">
+  <defs>
+    <!-- Subtle dot pattern -->
+    <pattern id="dot-grid-dark" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#21262d" />
+    </pattern>
+    <linearGradient id="fade-mask-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1" />
+    </linearGradient>
+    <mask id="grid-mask-dark">
+      <rect x="0" y="0" width="880" height="130" fill="url(#fade-mask-dark)" />
+    </mask>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="0.5" y="0.5" width="879" height="129" rx="8" fill="#0d1117" stroke="#30363d" />
+
+  <!-- Background Dots (fading in from center to right) -->
+  <rect x="360" y="1" width="518" height="128" fill="url(#dot-grid-dark)" mask="url(#grid-mask-dark)" />
+
+  <!-- Architectural Minimal Lattice (Right Side) -->
+  <g transform="translate(680, 24)" stroke="#30363d" stroke-width="1" opacity="0.85">
+    <!-- Grid nodes -->
+    <rect x="0" y="0" width="36" height="24" rx="3" fill="#161b22" />
+    <rect x="50" y="0" width="36" height="24" rx="3" fill="#161b22" />
+    <rect x="100" y="0" width="36" height="24" rx="3" fill="#161b22" />
+    
+    <rect x="25" y="44" width="36" height="24" rx="3" fill="#161b22" stroke="#388bfd" stroke-width="1.2" />
+    <rect x="75" y="44" width="36" height="24" rx="3" fill="#161b22" />
+
+    <!-- Connecting lines -->
+    <line x1="18" y1="24" x2="43" y2="44" stroke="#21262d" />
+    <line x1="68" y1="24" x2="43" y2="44" stroke="#388bfd" stroke-dasharray="2 2" />
+    <line x1="68" y1="24" x2="93" y2="44" stroke="#21262d" />
+    <line x1="118" y1="24" x2="93" y2="44" stroke="#21262d" />
+
+    <!-- Micro labels -->
+    <text x="18" y="16" font-family="ui-monospace, monospace" font-size="9" fill="#7d8590" text-anchor="middle">CPU</text>
+    <text x="68" y="16" font-family="ui-monospace, monospace" font-size="9" fill="#7d8590" text-anchor="middle">RAM</text>
+    <text x="118" y="16" font-family="ui-monospace, monospace" font-size="9" fill="#7d8590" text-anchor="middle">NIC</text>
+    <text x="43" y="60" font-family="ui-monospace, monospace" font-size="9" fill="#58a6ff" text-anchor="middle" font-weight="600">CUDA</text>
+    <text x="93" y="60" font-family="ui-monospace, monospace" font-size="9" fill="#7d8590" text-anchor="middle">TENSOR</text>
+  </g>
+
+  <!-- Left Content -->
+  <!-- Top Mono Tag -->
+  <g transform="translate(36, 32)">
+    <circle cx="4" cy="4" r="3.5" fill="#238636" />
+    <text x="16" y="7" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#7d8590" letter-spacing="1">KRISHNA KAUSHIK  /  SYSTEMS &amp; MACHINE LEARNING</text>
+  </g>
+
+  <!-- Primary Headline -->
+  <text x="36" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#f0f6fc" letter-spacing="-0.3">
+    AI Systems Architecture &amp; Low-Level Computing
+  </text>
+
+  <!-- Subtitle / Tech Tags -->
+  <text x="36" y="96" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" fill="#8b949e">
+    C/C++ <tspan fill="#30363d">·</tspan> CUDA <tspan fill="#30363d">·</tspan> PyTorch <tspan fill="#30363d">·</tspan> vLLM <tspan fill="#30363d">·</tspan> PostGIS <tspan fill="#30363d">·</tspan> Autonomous Agents
+  </text>
+</svg>

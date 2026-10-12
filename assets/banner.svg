@@ -1,345 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 260" width="920" height="260" fill="none">
-  <title>Krishna Kaushik — AI Systems Architecture &amp; FlashAttention Tensor Engine</title>
-  <desc>FlashAttention-3 Tensor Core Matrix, Autonomous Agent Swarms &amp; High-Throughput Inference</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 130" width="880" height="130" fill="none">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="cyber-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#030712" />
-      <stop offset="40%" stop-color="#080e21" />
-      <stop offset="75%" stop-color="#0c0721" />
-      <stop offset="100%" stop-color="#030712" />
-    </linearGradient>
-
-    <!-- Outer Border Gradient -->
-    <linearGradient id="cyber-border" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8" />
-      <stop offset="25%" stop-color="#3b82f6" stop-opacity="0.4" />
-      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8" />
-      <stop offset="75%" stop-color="#ec4899" stop-opacity="0.4" />
-      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.8" />
-    </linearGradient>
-
-    <!-- Name Typographic Gradient -->
-    <linearGradient id="name-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="50%" stop-color="#e0f2fe" />
-      <stop offset="100%" stop-color="#38bdf8" />
-    </linearGradient>
-
-    <!-- Electric Accent Line -->
-    <linearGradient id="laser-line" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.9" />
-      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1" />
-    </linearGradient>
-
-    <!-- Glass Panel Background -->
-    <linearGradient id="panel-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c142b" stop-opacity="0.95" />
-      <stop offset="100%" stop-color="#060914" stop-opacity="0.95" />
-    </linearGradient>
-
-    <!-- Ambient Core Nebula -->
-    <radialGradient id="nebula-soft" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.12" />
-      <stop offset="60%" stop-color="#8b5cf6" stop-opacity="0.04" />
-      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
-    </radialGradient>
-
-    <!-- Perspective Grid Pattern -->
-    <pattern id="matrix-grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1e293b" stroke-width="0.4" stroke-opacity="0.45" />
-      <circle cx="32" cy="32" r="0.75" fill="#00f0ff" fill-opacity="0.25" />
+    <!-- Subtle dot pattern -->
+    <pattern id="dot-grid-dark" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#21262d" />
     </pattern>
-
-    <!-- Neon Glow Filter -->
-    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <linearGradient id="fade-mask-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1" />
+    </linearGradient>
+    <mask id="grid-mask-dark">
+      <rect x="0" y="0" width="880" height="130" fill="url(#fade-mask-dark)" />
+    </mask>
   </defs>
 
-  <style>
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'JetBrains Mono', 'Fira Code', monospace; }
-    .sans { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif; }
-    
-    .hero-name { font-weight: 900; font-size: 38px; letter-spacing: 4.5px; fill: url(#name-gradient); }
-    .hero-sub { font-weight: 600; font-size: 13.5px; fill: #38bdf8; letter-spacing: 0.4px; }
-    .hero-desc { font-weight: 400; font-size: 11px; fill: #94a3b8; letter-spacing: 0.3px; }
-    
-    .status-tag { font-size: 8px; font-weight: 700; fill: #00f0ff; letter-spacing: 1.6px; }
-    .status-val { font-size: 8px; font-weight: 600; fill: #cbd5e1; letter-spacing: 0.6px; }
-    
-    .chip-bg { fill: #0a1128; stroke: #1e293b; stroke-width: 0.9; }
-    .chip-text { font-size: 8px; font-weight: 700; letter-spacing: 0.5px; }
-    
-    .cmd-prompt { font-size: 8.5px; font-weight: 600; fill: #38bdf8; letter-spacing: 0.4px; }
-    .cmd-meta { font-size: 8px; font-weight: 700; fill: #64748b; letter-spacing: 1.2px; }
+  <!-- Container Box -->
+  <rect x="0.5" y="0.5" width="879" height="129" rx="8" fill="#0d1117" stroke="#30363d" />
 
-    .panel-hdr { font-size: 7.5px; font-weight: 800; fill: #00f0ff; letter-spacing: 1.4px; }
-    .metric-lbl { font-size: 7px; font-weight: 600; fill: #64748b; letter-spacing: 0.6px; }
-    .metric-val { font-size: 7.5px; font-weight: 800; fill: #e2e8f0; letter-spacing: 0.4px; }
-  </style>
+  <!-- Background Dots (fading in from center to right) -->
+  <rect x="360" y="1" width="518" height="128" fill="url(#dot-grid-dark)" mask="url(#grid-mask-dark)" />
 
-  <!-- ================================================================= -->
-  <!-- 1. BASE CANVAS & PERSPECTIVE MATRIX                               -->
-  <!-- ================================================================= -->
-  <rect x="1" y="1" width="918" height="258" rx="14" fill="url(#cyber-bg)" stroke="url(#cyber-border)" stroke-width="1.2" />
-  <rect x="2" y="2" width="916" height="256" rx="13" fill="url(#matrix-grid)" />
-  <rect x="2" y="2" width="916" height="256" rx="13" fill="url(#nebula-soft)" />
-
-  <!-- Corner Sci-Fi Telemetry Ticks -->
-  <path d="M 16 30 L 16 16 L 30 16" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.8" />
-  <path d="M 904 30 L 904 16 L 890 16" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.8" />
-  <path d="M 16 230 L 16 244 L 30 244" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.8" />
-  <path d="M 904 230 L 904 244 L 890 244" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.8" />
-
-  <!-- ================================================================= -->
-  <!-- 2. TOP TELEMETRY HUD BAR                                          -->
-  <!-- ================================================================= -->
-  <g transform="translate(36, 22)">
-    <circle cx="4" cy="4" r="2.5" fill="#00ff9d">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite" />
-    </circle>
-    <text x="14" y="7" class="mono status-tag">NODE: ACTIVE</text>
-    <text x="96" y="7" class="mono status-val"><tspan fill="#475569">|</tspan> CLUSTER: 8x H100 SXM5 <tspan fill="#475569">|</tspan> INTERCONNECT: 3.2 Tbps InfiniBand <tspan fill="#475569">|</tspan> LATENCY: 7.8ms TTFT</text>
+  <!-- Architectural Minimal Lattice (Right Side) -->
+  <g transform="translate(680, 24)" stroke="#30363d" stroke-width="1" opacity="0.85">
+    <!-- Grid nodes -->
+    <rect x="0" y="0" width="36" height="24" rx="3" fill="#161b22" />
+    <rect x="50" y="0" width="36" height="24" rx="3" fill="#161b22" />
+    <rect x="100" y="0" width="36" height="24" rx="3" fill="#161b22" />
     
-    <line x1="0" y1="15" x2="848" y2="15" stroke="#1e293b" stroke-width="0.8" />
-    <line x1="0" y1="15" x2="180" y2="15" stroke="#00f0ff" stroke-width="1.2" opacity="0.7">
-      <animate attributeName="x1" values="0;668;0" dur="8s" repeatCount="indefinite" />
-      <animate attributeName="x2" values="180;848;180" dur="8s" repeatCount="indefinite" />
-    </line>
+    <rect x="25" y="44" width="36" height="24" rx="3" fill="#161b22" stroke="#388bfd" stroke-width="1.2" />
+    <rect x="75" y="44" width="36" height="24" rx="3" fill="#161b22" />
+
+    <!-- Connecting lines -->
+    <line x1="18" y1="24" x2="43" y2="44" stroke="#21262d" />
+    <line x1="68" y1="24" x2="43" y2="44" stroke="#388bfd" stroke-dasharray="2 2" />
+    <line x1="68" y1="24" x2="93" y2="44" stroke="#21262d" />
+    <line x1="118" y1="24" x2="93" y2="44" stroke="#21262d" />
+
+    <!-- Micro labels -->
+    <text x="18" y="16" font-family="ui-monospace, monospace" font-size="9" fill="#7d8590" text-anchor="middle">CPU</text>
+    <text x="68" y="16" font-family="ui-monospace, monospace" font-size="9" fill="#7d8590" text-anchor="middle">RAM</text>
+    <text x="118" y="16" font-family="ui-monospace, monospace" font-size="9" fill="#7d8590" text-anchor="middle">NIC</text>
+    <text x="43" y="60" font-family="ui-monospace, monospace" font-size="9" fill="#58a6ff" text-anchor="middle" font-weight="600">CUDA</text>
+    <text x="93" y="60" font-family="ui-monospace, monospace" font-size="9" fill="#7d8590" text-anchor="middle">TENSOR</text>
   </g>
 
-  <!-- ================================================================= -->
-  <!-- 3. HERO IDENTITY & SPECIALIZATION (LEFT)                          -->
-  <!-- ================================================================= -->
-  <g transform="translate(36, 58)">
-    <!-- Sub-badge -->
-    <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="186" height="18" rx="4" fill="#0c1329" stroke="#1e293b" stroke-width="0.8" />
-      <text x="8" y="12" class="mono" font-size="7.5" font-weight="700" fill="#00f0ff" letter-spacing="1.4px">
-        // COGNITIVE INFRASTRUCTURE
-      </text>
-    </g>
-
-    <!-- Main Title -->
-    <text x="0" y="52" class="sans hero-name">KRISHNA</text>
-    <text x="212" y="52" class="sans hero-name" fill="#38bdf8" opacity="0.9">KAUSHIK</text>
-
-    <!-- Glowing Accent Underline -->
-    <path d="M 0 64 L 380 64" stroke="url(#laser-line)" stroke-width="1.8" />
-
-    <!-- Role Statement -->
-    <text x="0" y="86" class="sans hero-sub">
-      AI Systems Engineer <tspan fill="#00f0ff">•</tspan> LLM Architect <tspan fill="#8b5cf6">•</tspan> High-Throughput Inference
-    </text>
-
-    <!-- Technical Vision -->
-    <text x="0" y="108" class="sans hero-desc">
-      Architecting autonomous agentic reasoning loops, vLLM paged attention &amp; C++/CUDA kernels.
-    </text>
-
-    <!-- Interactive AI Architecture Chips -->
-    <g transform="translate(0, 126)">
-      <!-- Chip 1: vLLM / PagedKV -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="102" height="20" rx="4" class="chip-bg" />
-        <circle cx="10" cy="10" r="2.5" fill="#00f0ff" />
-        <text x="20" y="13" class="mono chip-text" fill="#00f0ff">vLLM // PAGED_KV</text>
-      </g>
-
-      <!-- Chip 2: Agent Swarms -->
-      <g transform="translate(110, 0)">
-        <rect x="0" y="0" width="100" height="20" rx="4" class="chip-bg" />
-        <circle cx="10" cy="10" r="2.5" fill="#c084fc" />
-        <text x="20" y="13" class="mono chip-text" fill="#c084fc">AGENT_SWARMS</text>
-      </g>
-
-      <!-- Chip 3: PyTorch / CUDA -->
-      <g transform="translate(218, 0)">
-        <rect x="0" y="0" width="98" height="20" rx="4" class="chip-bg" />
-        <circle cx="10" cy="10" r="2.5" fill="#38bdf8" />
-        <text x="20" y="13" class="mono chip-text" fill="#38bdf8">PYTORCH / CUDA</text>
-      </g>
-
-      <!-- Chip 4: GraphRAG -->
-      <g transform="translate(324, 0)">
-        <rect x="0" y="0" width="82" height="20" rx="4" class="chip-bg" />
-        <circle cx="10" cy="10" r="2.5" fill="#34d399" />
-        <text x="20" y="13" class="mono chip-text" fill="#34d399">GRAPH_RAG</text>
-      </g>
-    </g>
+  <!-- Left Content -->
+  <!-- Top Mono Tag -->
+  <g transform="translate(36, 32)">
+    <circle cx="4" cy="4" r="3.5" fill="#238636" />
+    <text x="16" y="7" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" fill="#7d8590" letter-spacing="1">KRISHNA KAUSHIK  /  SYSTEMS &amp; MACHINE LEARNING</text>
   </g>
 
-  <!-- ================================================================= -->
-  <!-- 4. RIGHT SECTION: FLASHATTENTION-3 SILICON TENSOR DIE & HEATMAP   -->
-  <!-- ================================================================= -->
-  <g id="silicon-tensor-engine" transform="translate(560, 48)">
-    <!-- Container Glass Panel -->
-    <rect x="0" y="0" width="324" height="170" rx="8" fill="url(#panel-bg)" stroke="#1e293b" stroke-width="1" />
-    <path d="M 0 0 L 16 0 L 0 16 Z" fill="#00f0ff" opacity="0.8" />
-    <path d="M 324 0 L 308 0 L 324 16 Z" fill="#8b5cf6" opacity="0.8" />
+  <!-- Primary Headline -->
+  <text x="36" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#f0f6fc" letter-spacing="-0.3">
+    AI Systems Architecture &amp; Low-Level Computing
+  </text>
 
-    <!-- Panel Header Bar -->
-    <g transform="translate(14, 16)">
-      <circle cx="0" cy="0" r="3" fill="#00f0ff">
-        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
-      </circle>
-      <text x="8" y="2.5" class="mono panel-hdr">FLASHATTENTION-3 // TENSOR COMPUTE DIE</text>
-      <text x="296" y="2.5" class="mono" font-size="7" font-weight="700" fill="#00ff9d" text-anchor="end">LIVE STREAM</text>
-      <line x1="-6" y1="10" x2="296" y2="10" stroke="#1e293b" stroke-width="0.8" />
-    </g>
-
-    <!-- LEFT SIDE: Attention Matrix Grid (8x3 tiles pulsing with attention weights) -->
-    <g id="attention-matrix-tiles" transform="translate(14, 38)">
-      <text x="0" y="0" class="mono" font-size="6.5" font-weight="700" fill="#64748b" letter-spacing="0.8px">MULTI-HEAD ATTENTION WEIGHTS (Q × Kᵀ)</text>
-      
-      <!-- Row 1 -->
-      <g transform="translate(0, 8)">
-        <rect x="0" y="0" width="16" height="12" rx="2" fill="#00f0ff" opacity="0.85">
-          <animate attributeName="opacity" values="0.85;0.35;0.85" dur="1.8s" repeatCount="indefinite" />
-        </rect>
-        <rect x="19" y="0" width="16" height="12" rx="2" fill="#3b82f6" opacity="0.45">
-          <animate attributeName="opacity" values="0.45;0.9;0.45" dur="2.4s" repeatCount="indefinite" />
-        </rect>
-        <rect x="38" y="0" width="16" height="12" rx="2" fill="#8b5cf6" opacity="0.7">
-          <animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.5s" repeatCount="indefinite" />
-        </rect>
-        <rect x="57" y="0" width="16" height="12" rx="2" fill="#00f0ff" opacity="0.3">
-          <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.1s" repeatCount="indefinite" />
-        </rect>
-        <rect x="76" y="0" width="16" height="12" rx="2" fill="#a855f7" opacity="0.6">
-          <animate attributeName="opacity" values="0.6;0.25;0.6" dur="2.7s" repeatCount="indefinite" />
-        </rect>
-        <rect x="95" y="0" width="16" height="12" rx="2" fill="#00ff9d" opacity="0.9">
-          <animate attributeName="opacity" values="0.9;0.4;0.9" dur="1.9s" repeatCount="indefinite" />
-        </rect>
-      </g>
-
-      <!-- Row 2 -->
-      <g transform="translate(0, 23)">
-        <rect x="0" y="0" width="16" height="12" rx="2" fill="#8b5cf6" opacity="0.4">
-          <animate attributeName="opacity" values="0.4;0.85;0.4" dur="2.2s" repeatCount="indefinite" />
-        </rect>
-        <rect x="19" y="0" width="16" height="12" rx="2" fill="#00f0ff" opacity="0.95">
-          <animate attributeName="opacity" values="0.95;0.3;0.95" dur="1.6s" repeatCount="indefinite" />
-        </rect>
-        <rect x="38" y="0" width="16" height="12" rx="2" fill="#3b82f6" opacity="0.5">
-          <animate attributeName="opacity" values="0.5;0.95;0.5" dur="2.6s" repeatCount="indefinite" />
-        </rect>
-        <rect x="57" y="0" width="16" height="12" rx="2" fill="#ec4899" opacity="0.75">
-          <animate attributeName="opacity" values="0.75;0.2;0.75" dur="1.7s" repeatCount="indefinite" />
-        </rect>
-        <rect x="76" y="0" width="16" height="12" rx="2" fill="#00f0ff" opacity="0.4">
-          <animate attributeName="opacity" values="0.4;0.85;0.4" dur="2.3s" repeatCount="indefinite" />
-        </rect>
-        <rect x="95" y="0" width="16" height="12" rx="2" fill="#8b5cf6" opacity="0.8">
-          <animate attributeName="opacity" values="0.8;0.35;0.8" dur="1.4s" repeatCount="indefinite" />
-        </rect>
-      </g>
-
-      <!-- Row 3 -->
-      <g transform="translate(0, 38)">
-        <rect x="0" y="0" width="16" height="12" rx="2" fill="#00ff9d" opacity="0.6">
-          <animate attributeName="opacity" values="0.6;0.95;0.6" dur="2.5s" repeatCount="indefinite" />
-        </rect>
-        <rect x="19" y="0" width="16" height="12" rx="2" fill="#8b5cf6" opacity="0.3">
-          <animate attributeName="opacity" values="0.3;0.75;0.3" dur="1.9s" repeatCount="indefinite" />
-        </rect>
-        <rect x="38" y="0" width="16" height="12" rx="2" fill="#00f0ff" opacity="0.85">
-          <animate attributeName="opacity" values="0.85;0.4;0.85" dur="2.0s" repeatCount="indefinite" />
-        </rect>
-        <rect x="57" y="0" width="16" height="12" rx="2" fill="#3b82f6" opacity="0.65">
-          <animate attributeName="opacity" values="0.65;0.15;0.65" dur="2.8s" repeatCount="indefinite" />
-        </rect>
-        <rect x="76" y="0" width="16" height="12" rx="2" fill="#ec4899" opacity="0.9">
-          <animate attributeName="opacity" values="0.9;0.5;0.9" dur="1.3s" repeatCount="indefinite" />
-        </rect>
-        <rect x="95" y="0" width="16" height="12" rx="2" fill="#00f0ff" opacity="0.5">
-          <animate attributeName="opacity" values="0.5;0.95;0.5" dur="2.2s" repeatCount="indefinite" />
-        </rect>
-      </g>
-    </g>
-
-    <!-- VERTICAL DIVIDER INSIDE PANEL -->
-    <line x1="140" y1="36" x2="140" y2="124" stroke="#1e293b" stroke-width="0.8" />
-
-    <!-- RIGHT SIDE: Q / K / V Conduits & Dynamic MoE Routing -->
-    <g id="conduits-and-moe" transform="translate(152, 38)">
-      <text x="0" y="0" class="mono" font-size="6.5" font-weight="700" fill="#64748b" letter-spacing="0.8px">DYNAMIC MoE TOP-2 ROUTING</text>
-      
-      <!-- Expert 1 Box -->
-      <g transform="translate(0, 10)">
-        <rect x="0" y="0" width="144" height="20" rx="3" fill="#070d1e" stroke="#00f0ff" stroke-width="0.8" opacity="0.9" />
-        <circle cx="8" cy="10" r="2.5" fill="#00f0ff" />
-        <text x="16" y="13" class="mono" font-size="7.5" font-weight="700" fill="#e2e8f0">EXPERT_01 // REASONING</text>
-        <text x="136" y="13" class="mono" font-size="7.5" font-weight="800" fill="#00f0ff" text-anchor="end">W:0.74</text>
-      </g>
-
-      <!-- Expert 2 Box -->
-      <g transform="translate(0, 34)">
-        <rect x="0" y="0" width="144" height="20" rx="3" fill="#070d1e" stroke="#8b5cf6" stroke-width="0.8" opacity="0.9" />
-        <circle cx="8" cy="10" r="2.5" fill="#8b5cf6" />
-        <text x="16" y="13" class="mono" font-size="7.5" font-weight="700" fill="#e2e8f0">EXPERT_04 // SYNTAX_CUDA</text>
-        <text x="136" y="13" class="mono" font-size="7.5" font-weight="800" fill="#c084fc" text-anchor="end">W:0.26</text>
-      </g>
-    </g>
-
-    <!-- BOTTOM TELEMETRY STRIP INSIDE PANEL -->
-    <g transform="translate(14, 134)">
-      <line x1="-4" y1="0" x2="298" y2="0" stroke="#1e293b" stroke-width="0.8" />
-      
-      <!-- Metric 1: Throughput -->
-      <g transform="translate(0, 14)">
-        <text x="0" y="0" class="mono metric-lbl">THROUGHPUT</text>
-        <text x="0" y="10" class="mono metric-val" fill="#00f0ff">3,420 tok/s</text>
-      </g>
-
-      <!-- Metric 2: Cache Hit -->
-      <g transform="translate(76, 14)">
-        <text x="0" y="0" class="mono metric-lbl">KV PAGING HIT</text>
-        <text x="0" y="10" class="mono metric-val" fill="#00ff9d">99.4%</text>
-      </g>
-
-      <!-- Metric 3: Compute FP8 -->
-      <g transform="translate(154, 14)">
-        <text x="0" y="0" class="mono metric-lbl">COMPUTE PRECISION</text>
-        <text x="0" y="10" class="mono metric-val" fill="#c084fc">FP8 // TENSORRT</text>
-      </g>
-
-      <!-- Metric 4: Context Window -->
-      <g transform="translate(244, 14)">
-        <text x="0" y="0" class="mono metric-lbl">CONTEXT</text>
-        <text x="0" y="10" class="mono metric-val" fill="#38bdf8">128k CTX</text>
-      </g>
-    </g>
-  </g>
-
-  <!-- ================================================================= -->
-  <!-- 5. BOTTOM INTERACTIVE COMMAND RUNNER CONSOLE                      -->
-  <!-- ================================================================= -->
-  <g transform="translate(36, 234)">
-    <line x1="0" y1="-8" x2="848" y2="-8" stroke="#1e293b" stroke-width="0.8" />
-
-    <!-- Terminal Command Line -->
-    <text x="0" y="6" class="mono cmd-prompt">
-      <tspan fill="#00f0ff">❯</tspan> vllm.serve(model="<tspan fill="#ffffff">neural-agent-70b</tspan>", tensor_parallel=4, paged_kv=True)
-    </text>
-
-    <!-- Blinking Block Cursor -->
-    <rect x="444" y="-2" width="5" height="10" fill="#00f0ff" opacity="0.9">
-      <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" />
-    </rect>
-
-    <!-- Right-aligned System Health Tag -->
-    <g transform="translate(712, 6)">
-      <circle cx="0" cy="-2" r="2.5" fill="#00ff9d" />
-      <text x="8" y="1" class="mono cmd-meta">HEALTH: 100% // OPTIMAL</text>
-    </g>
-  </g>
+  <!-- Subtitle / Tech Tags -->
+  <text x="36" y="96" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" fill="#8b949e">
+    C/C++ <tspan fill="#30363d">·</tspan> CUDA <tspan fill="#30363d">·</tspan> PyTorch <tspan fill="#30363d">·</tspan> vLLM <tspan fill="#30363d">·</tspan> PostGIS <tspan fill="#30363d">·</tspan> Autonomous Agents
+  </text>
 </svg>
